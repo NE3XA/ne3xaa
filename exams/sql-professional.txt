@@ -1,0 +1,20 @@
+N3X4 — SQL Professional Practice Paper
+Time guide: 45 minutes · 15 sample topics
+
+1. CTE (WITH) for readable multi-step queries
+2. Window functions: ROW_NUMBER, RANK, SUM OVER
+3. Isolation levels and concurrency anomalies
+4. Index design for high-read workloads
+5. Partitioning strategies (conceptual)
+6. Query optimization: sargable predicates
+7. Materialized views use cases
+8. Schema migration practices
+9. Soft deletes vs hard deletes
+10. Analytics: cohort-style grouping
+11. Avoiding N+1 patterns from the SQL side
+12. Permissions and least privilege
+13. Backup/restore awareness for schema changes
+14. JSON columns vs relational modeling trade-offs
+15. Writing maintainable, documented SQL for teams
+
+Grade A: 80%+ · Grade B: 65–79%.

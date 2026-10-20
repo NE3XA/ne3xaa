@@ -1,0 +1,5 @@
+N3X4 — JavaScript Practice Paper (self-paced)
+Time guide: 40 minutes
+
+Cover: let/const, ===, DOM queries, events, arrays (map), JSON, promises, falsy values.
+Complete exercises from your course materials. Grade A: 80%+ · Grade B: 65–79%.

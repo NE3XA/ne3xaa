@@ -1,0 +1,5 @@
+N3X4 — SQL Practice Paper (self-paced)
+Time guide: 30 minutes
+
+Cover: SELECT, WHERE, JOIN, PRIMARY KEY, ORDER BY, COUNT, NULL, GROUP BY, INSERT, VARCHAR.
+Grade A: 80%+ · Grade B: 65–79%.

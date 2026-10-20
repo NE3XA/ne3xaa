@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NE3XA — Technology company building software, school systems and programming education.">
+  <title>About Us — NE3XA</title>
+  <link rel="icon" type="image/jpeg" href="./images/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* About page — transitions & hovers on all sections */
+    .about-hero-wrap {
+      position: relative;
+      min-height: 380px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0a0a0c;
+      transition: background 0.4s ease;
+    }
+    .about-hero-wrap img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+      transition: transform 8s ease, opacity 0.5s ease;
+    }
+    .about-hero-wrap:hover img {
+      transform: scale(1.06);
+    }
+    .about-hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 3rem 0 2.5rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      transition: background 0.35s ease;
+    }
+    .about-hero-content h1,
+    .about-hero-content p {
+      transition: color 0.3s ease, transform 0.35s ease;
+    }
+    .about-story-img {
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+      aspect-ratio: 4/3;
+      transition: box-shadow 0.4s ease, transform 0.4s ease;
+    }
+    .about-story-img:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+    }
+    .about-story-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s ease;
+    }
+    .about-story-img:hover img {
+      transform: scale(1.05);
+    }
+    .about-values-grid .card,
+    .services-grid .card {
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  box-shadow 0.35s ease,
+                  border-color 0.3s ease;
+    }
+    .about-values-grid .card:hover,
+    .services-grid .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+      border-color: var(--accent);
+    }
+    [data-theme="dark"] .about-values-grid .card:hover,
+    [data-theme="dark"] .services-grid .card:hover {
+      box-shadow: 0 14px 36px rgba(0,0,0,0.4);
+    }
+    .about-team-card {
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.3s ease;
+    }
+    .about-cta-section a.btn {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .about-cta-section a.btn:hover {
+      transform: translateY(-2px);
+    }
+    .title-mark {
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    .about-title-logo:hover .title-mark {
+      transform: scale(1.03);
+    }
+    .section.reveal-ready .reveal {
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="NE3XA Home">
+        <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light" width="180" height="52">
+        <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark" width="180" height="52">
+      </a>
+      <nav class="nav-desktop" aria-label="Main">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services <svg class="chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5L6 7.5L9 4.5"/></svg></a>
+          <div class="dropdown">
+            <span class="dropdown-label">What we do</span>
+            <a href="software-development.html">Software Development</a>
+            <a href="web-development.html">Web Development</a>
+            <a href="mobile-app-development.html">Mobile Applications</a>
+            <a href="school-management.html">School Management Systems</a>
+            <a href="services.html">IT Consulting</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="programming-lessons.html" class="nav-link">Programming</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+        <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="join-team.html" class="btn-join-team">Join NE3XA</a>
+        <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" aria-label="Mobile">
+    <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+    <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+    <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+    <div class="nav-item"><a href="programming-lessons.html" class="nav-link">Programming</a></div>
+    <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+    <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+    <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+    <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+    <div class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></div>
+    <div class="nav-item"><a href="join-team.html" class="nav-link nav-ne3xa-mobile">Join NE3XA</a></div>
+  </nav>
+<main>
+    <!-- Hero with hologram-style start NE3XA visual -->
+    <section class="section" style="padding-top:0;padding-bottom:0;">
+      <div class="about-hero-wrap">
+        <img src="https://s3.us-east-1.amazonaws.com/victoria-university-elearning/website/images/gallery/7eee06ba-71ce-4679-8ba9-3ed84e946fe6.jpeg"
+             alt="Technology workspace">
+        <div class="about-hero-content">
+          <div class="container" style="max-width:720px;">
+            <p class="section-eyebrow" style="color:#E11D48;">About NE3XA</p>
+            <h1 style="color:#fff;font-size:clamp(1.75rem,4vw,2.6rem);margin:0.4rem 0 0.75rem;">Technology that starts when you need it</h1>
+            <p style="color:rgba(255,255,255,0.85);margin:0 0 1.25rem;max-width:520px;">We help people and organisations use software without the noise — school systems, SACCO tools, analytics and teaching that hold up in daily use.</p>
+            <a href="join-team.html" class="btn btn-primary btn-lg">Start with NE3XA</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-off">
+      <div class="container">
+        <div class="two-col">
+          <div class="reveal">
+            <div class="about-title-logo" style="margin-bottom:1.5rem;">
+              <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light title-mark" style="max-height:48px;width:auto;">
+              <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark title-mark" style="max-height:48px;width:auto;">
+            </div>
+            <h2>Our story</h2>
+            <p>NE3XA started from a simple observation: many schools and small businesses were stuck between paper processes and tools that were either too expensive or too complicated. We began by building practical systems for local institutions, then added training so teams could maintain and extend what we delivered.</p>
+            <p>Over time we expanded into custom software, structured programming education, NE3XA Analytics, a SACCO savings platform, and a focused laptop offering. The common thread is the same — technology that matches real constraints and real users.</p>
+          </div>
+          <div class="reveal">
+            <div class="about-story-img">
+              <img src="https://s3.us-east-1.amazonaws.com/victoria-university-elearning/website/images/gallery/57fb6087-5567-40fc-90af-f459fa1d108c.jpeg" alt="Team collaborating on technology" loading="lazy">
+            </div>
+            <h2>Mission</h2>
+            <p>To make useful software, clear teaching and reliable hardware accessible to schools, businesses and learners who need them to work better, not just look modern.</p>
+            <h2 class="mt-3">Vision</h2>
+            <p>A region where institutions and individuals can rely on digital tools that are understandable, maintainable and fit for purpose.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">How we work</p>
+          <h2>Approach</h2>
+        </div>
+        <div class="services-grid">
+          <article class="card reveal"><h3>Listen first</h3><p>We map processes and constraints before proposing solutions. Assumptions are checked early.</p></article>
+          <article class="card reveal"><h3>Prefer clarity</h3><p>Interfaces and documentation should be readable by the people who will use and maintain the system.</p></article>
+          <article class="card reveal"><h3>Deliver in stages</h3><p>Working software in iterations beats a long wait for a perfect big-bang release.</p></article>
+          <article class="card reveal"><h3>Support after launch</h3><p>Handover includes training and optional maintenance so systems do not become orphaned.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-off">
+      <div class="container">
+        <div style="border-radius:16px;overflow:hidden;margin-bottom:2rem;aspect-ratio:21/9;">
+          <img src="https://s3.us-east-1.amazonaws.com/victoria-university-elearning/website/images/gallery/e4852541-33a2-4c99-a1d4-1e1ec986b31e.jpeg" alt="Technology and digital systems" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+        </div>
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Team</p>
+          <h2>People behind the work</h2>
+          <p class="lead">A small team of developers, designers and educators. Roles are flexible; quality of delivery is not.</p>
+        </div>
+        <div class="services-grid">
+          <article class="card reveal about-team-card">
+            <div class="about-team-avatar" style="background:var(--text);">MF</div>
+            <h3>Munoga F.</h3>
+            <p class="text-sm" style="color:var(--mid-grey);">Lead developer</p>
+            <p>Full-stack systems, school platforms and API design.</p>
+          </article>
+          <article class="card reveal about-team-card">
+            <div class="about-team-avatar" style="background:var(--accent);">MK</div>
+            <h3>Mugisha K.</h3>
+            <p class="text-sm" style="color:var(--mid-grey);">Product &amp; education</p>
+            <p>Course design, curriculum and client onboarding.</p>
+          </article>
+          <article class="card reveal about-team-card">
+            <div class="about-team-avatar" style="background:var(--secondary);">NL</div>
+            <h3>Nabagala L.</h3>
+            <p class="text-sm" style="color:var(--mid-grey);">Hardware &amp; support</p>
+            <p>Device selection, configuration and after-sales support.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-cta-section">
+      <div class="container text-center">
+        <h2 style="margin-bottom:0.75rem;">Ready to start with NE3XA?</h2>
+        <p class="lead" style="margin-bottom:1.25rem;">Join the team, explore projects, or get in touch about software for your school or business.</p>
+        <a href="join-team.html" class="btn btn-primary btn-lg">Join NE3XA</a>
+        <a href="contact.html" class="btn btn-outline btn-lg" style="margin-left:0.5rem;">Contact</a>
+      </div>
+    </section>
+  </main>
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="NE3XA Home">
+        <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light" width="180" height="52">
+        <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark" width="180" height="52">
+      </a>
+          <p>Technology company focused on software, school systems and programming education.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="software-development.html">Software development</a>
+          <a href="web-development.html">Web development</a>
+          <a href="mobile-app-development.html">Mobile apps</a>
+          <a href="school-management.html">School management</a>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="programming-lessons.html">Programming courses</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Get in touch</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="values.html">Values</a>
+          <a href="process.html">Process</a>
+          <a href="careers.html">Careers</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 NE3XA. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <button class="back-to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script src="js/main.js"></script>
+  <script src="js/web-crawler.js"></script>
+  <script src="js/web-crawler-2.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+N3X4 — HTML & CSS Professional Practice Paper
+Time guide: 45 minutes · 15 sample topics
+
+1. Designing a token-based design system in CSS
+2. Critical CSS and progressive enhancement
+3. Advanced selectors and :has() practical uses
+4. Accessibility audit checklist (WCAG focus)
+5. Performance: font loading, image strategies, content-visibility
+6. CSS architecture at scale (ITCSS, CUBE, etc.)
+7. Semantic landmarks and skip links
+8. Dark mode strategies (prefers-color-scheme + class toggle)
+9. Subgrid and complex component layouts
+10. Print stylesheets for reports
+11. Internationalization: dir, logical properties
+12. Testing visual regressions for UI
+13. When to use web components vs CSS-only patterns
+14. Security: CSP considerations for inline styles
+15. Documenting component CSS for a team
+
+Grade A: 80%+ · Grade B: 65–79%.

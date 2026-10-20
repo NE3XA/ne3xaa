@@ -1,0 +1,17 @@
+N3X4 — Python Intermediate Practice Paper
+Time guide: 45 minutes · 12 sample topics
+
+1. List/dict comprehensions and when not to use them
+2. Classes, __init__, instance vs class attributes
+3. Exceptions: raise, custom exceptions, finally
+4. Modules, packages, and import styles
+5. Context managers (with) for files and resources
+6. *args and **kwargs
+7. lambda, map, filter vs comprehensions
+8. pathlib basics
+9. Virtual environments purpose
+10. Unit test structure with unittest or pytest (overview)
+11. JSON and CSV handling
+12. Sorting with key functions
+
+Grade A: 80%+ · Grade B: 65–79%.

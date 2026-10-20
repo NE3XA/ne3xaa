@@ -1,0 +1,17 @@
+N3X4 — JavaScript Intermediate Practice Paper
+Time guide: 45 minutes · 12 sample topics
+
+1. Closures and practical use cases
+2. Promise chaining vs async/await
+3. Array methods: map, filter, reduce, find
+4. Destructuring and rest/spread
+5. Modules (import/export) and scope
+6. Error handling with try/catch and Promise rejection
+7. Event delegation patterns
+8. this binding and arrow functions
+9. JSON serialization pitfalls
+10. Debounce and throttle ideas
+11. localStorage vs sessionStorage
+12. Optional chaining and nullish coalescing
+
+Grade A: 80%+ · Grade B: 65–79%.

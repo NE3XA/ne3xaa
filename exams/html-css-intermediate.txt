@@ -1,0 +1,17 @@
+N3X4 — HTML & CSS Intermediate Practice Paper
+Time guide: 35 minutes · 12 sample topics
+
+1. Difference between Flexbox and Grid for two-dimensional layouts
+2. CSS specificity order and how to resolve conflicts
+3. Custom properties (CSS variables) and theming
+4. Form validation attributes (required, pattern, type)
+5. Position sticky vs fixed vs absolute
+6. Container queries vs media queries
+7. Accessible form labels and fieldsets
+8. aspect-ratio and object-fit for media
+9. CSS cascade layers (@layer) purpose
+10. Writing a responsive navigation pattern
+11. BEM or utility-class naming trade-offs
+12. Reducing layout shift (CLS) with size hints
+
+Grade A: 80%+ · Grade B: 65–79%.

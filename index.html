@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NE3XA — Technology company building software, school systems and programming education.">
+  <title>ne3xa</title>
+  <link rel="icon" type="image/jpeg" href="./images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="NE3XA Home">
+        <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light" width="180" height="52">
+        <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark" width="180" height="52">
+      </a>
+      <nav class="nav-desktop" aria-label="Main">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services <svg class="chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5L6 7.5L9 4.5"/></svg></a>
+          <div class="dropdown">
+            <span class="dropdown-label">What we do</span>
+            <a href="software-development.html">Software Development</a>
+            <a href="web-development.html">Web Development</a>
+            <a href="mobile-app-development.html">Mobile Applications</a>
+            <a href="school-management.html">School Management Systems</a>
+            <a href="services.html">IT Consulting</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="programming-lessons.html" class="nav-link">Programming</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+        <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="join-team.html" class="btn-join-team">Join NE3XA</a>
+        <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" aria-label="Mobile">
+    <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+    <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+    <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+    <div class="nav-item"><a href="programming-lessons.html" class="nav-link">Programming</a></div>
+    <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+    <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+    <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+    <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+    <div class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></div>
+    <div class="nav-item"><a href="join-team.html" class="nav-link nav-ne3xa-mobile">Join NE3XA</a></div>
+  </nav>
+<main>
+    <!-- Hero-section -->
+    <section class="hero hero-bg-slides">
+      <div class="hero-bg-slider" id="hero-slider" aria-live="polite">
+        <div class="hero-slide active" data-word="work">
+          <img src="https://s3.us-east-1.amazonaws.com/victoria-university-elearning/website%2Fnews_blog%2Fimages%2Fba55c91c-3231-46ca-978e-1575b2690347.jpeg" alt="Victoria University technology and campus" class="slide-img">
+        </div>
+        <div class="hero-slide" data-word="learn">
+          <img src="https://s3.us-east-1.amazonaws.com/victoria-university-elearning/website/images/gallery/57fb6087-5567-40fc-90af-f459fa1d108c.jpeg" alt="Victoria University campus learning environment" class="slide-img">
+        </div>
+        <div class="hero-slide" data-word="build">
+          <img src="https://s3.us-east-1.amazonaws.com/victoria-university-elearning/website/images/gallery/e4852541-33a2-4c99-a1d4-1e1ec986b31e.jpeg" alt="Victoria University students building the future" class="slide-img">
+        </div>
+        <div class="hero-slide" data-word="grow">
+          <img src="https://s3.us-east-1.amazonaws.com/victoria-university-elearning/website/images/gallery/86324c65-9518-4735-ba31-0a15ae3ce9e3.jpeg" alt="Victoria University growth and innovation" class="slide-img">
+        </div>
+        <div class="hero-slide" data-word="create">
+          <img src="https://s3.us-east-1.amazonaws.com/victoria-university-elearning/website/images/gallery/422b1d2a-2a51-45c5-93a5-057bb26762bc.jpeg" alt="Victoria University creating digital solutions" class="slide-img">
+        </div>
+        <div class="hero-bg-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="container hero-content-wrap">
+        <div class="hero-content hero-content-on-bg">
+          <p class="hero-eyebrow">NE3XA Technology</p>
+          <h1>Technology built for how you <span class="hero-word is-active" id="hero-rotating-word">work</span>.</h1>
+          <p class="lead">We build software for schools and businesses and teach programming. Practical technology, clear communication, solid delivery.</p>
+          <div class="hero-ctas">
+            <a href="services.html" class="btn btn-primary btn-lg">Explore our services</a>
+            <a href="school-management.html" class="btn btn-outline btn-lg hero-btn-light">School systems</a>
+            <a href="programming-lessons.html" class="btn btn-ghost btn-lg hero-btn-light">Start learning</a>
+          </div>
+          <div class="hero-progress-wrap">
+            <div class="hero-progress-bar" aria-hidden="true"><div class="hero-progress-fill" id="hero-progress"></div></div>
+            <span class="hero-timer" id="hero-timer">3.0s</span>
+          </div>
+          <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Slides"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech counters -->
+    <section class="counters-section">
+      <div class="container">
+        <div class="tech-counters">
+          <div class="tech-counter counter-card">
+            <strong data-count="48" data-suffix="+" data-dir="up">0</strong>
+            <span>Systems delivered</span>
+          </div>
+          <div class="tech-counter counter-card">
+            <strong data-count="120" data-suffix="+" data-dir="down">0</strong>
+            <span>Students trained</span>
+          </div>
+          <div class="tech-counter counter-card">
+            <strong data-count="15" data-suffix="" data-dir="up">0</strong>
+            <span>Languages taught</span>
+          </div>
+          <div class="tech-counter counter-card">
+            <strong data-count="99" data-suffix="%" data-dir="down">0</strong>
+            <span>Uptime target</span>
+          </div>
+        </div>
+        <p class="text-sm mt-2" style="color:var(--text-muted);text-align:center;">Grow Your School, Business and Learn Tech with Us.</p>
+      </div>
+    </section>
+
+    <!-- What we do -->
+    <section class="section section-what-we-do">
+      <div class="binary-rain" id="binary-rain" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">What we do</p>
+          <h2>Four ways we work with you</h2>
+          <p class="lead">From custom software to school systems and programming education, we focus on solutions that are usable day one.</p>
+        </div>
+        <div class="services-grid">
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            </div>
+            <h3>Software development</h3>
+            <p>Business systems, web and mobile applications, APIs and integrations built around how your organisation actually works.</p>
+            <a href="software-development.html" class="btn btn-ghost btn-sm mt-2">Learn more</a>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+            </div>
+            <h3>School management</h3>
+            <p>Student records, fees, exams, attendance and parent communication in one coherent platform designed for real school operations.</p>
+            <a href="school-management.html" class="btn btn-ghost btn-sm mt-2">View system</a>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            </div>
+            <h3>Programming lessons</h3>
+            <p>Structured courses in HTML, CSS, JavaScript, Python, Java and more. Clear paths from beginner to job-ready skills.</p>
+            <a href="programming-lessons.html" class="btn btn-ghost btn-sm mt-2">Browse courses</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- School SMS -->
+    <section class="section bg-off">
+      <div class="container">
+        <div class="two-col">
+          <div class="reveal">
+            <p class="section-eyebrow">School Management</p>
+            <h2>One system for admissions, fees, results and communication</h2>
+            <p>Schools spend too much time moving data between spreadsheets, paper registers and disconnected tools. Our school management system — powered by <strong>NE3XA Analytics</strong> — keeps student information, attendance, examinations and fee records in one place.</p>
+            <ul style="margin:1.5rem 0;padding-left:1.25rem;color:var(--text-secondary);">
+              <li style="margin-bottom:0.5rem;">Student and teacher profiles with role-based access</li>
+              <li style="margin-bottom:0.5rem;">Attendance, timetables and class management</li>
+              <li style="margin-bottom:0.5rem;">Exams, results and printable report cards</li>
+              <li style="margin-bottom:0.5rem;">Fees tracking and parent notifications</li>
+              <li style="margin-bottom:0.5rem;">NE3XA Analytics: track records, generate insights and print reports</li>
+            </ul>
+            <a href="school-management.html" class="btn btn-primary">Explore NE3XA Analytics</a>
+          </div>
+          <div class="reveal">
+            <div class="img-ph img-ph-lg">
+              <img src="./images/NE3XA.png" alt="" srcset="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programming teaser -->
+    <section class="section prog-section-bg">
+      <div class="container">
+        <div class="section-header center reveal">
+          <p class="section-eyebrow">Programming education</p>
+          <h2>Learn to build, not just watch tutorials</h2>
+          <p class="lead">Our courses combine clear explanations with practical exercises and curated resources.</p>
+        </div>
+        <div class="course-grid">
+          <article class="course-card reveal">
+            <span class="course-level beginner">Beginner</span>
+            <h3>HTML and CSS Foundations</h3>
+            <p>Structure pages properly and style them with modern CSS. Layout, responsive design and accessibility basics.</p>
+            <div class="course-meta"><span>~6 weeks</span><span>Self-paced</span></div>
+            <a href="programming-lessons.html" class="btn btn-outline btn-sm">Start learning</a>
+          </article>
+          <article class="course-card reveal">
+            <span class="course-level intermediate">Intermediate</span>
+            <h3>JavaScript Essentials</h3>
+            <p>Variables, functions, DOM, events and asynchronous patterns. Build interactive web pages.</p>
+            <div class="course-meta"><span>~8 weeks</span><span>Self-paced</span></div>
+            <a href="programming-lessons.html" class="btn btn-outline btn-sm">Start learning</a>
+          </article>
+          <article class="course-card reveal">
+            <span class="course-level beginner">Beginner</span>
+            <h3>Python for Beginners</h3>
+            <p>Syntax, data structures, file handling and simple scripts. A solid base for automation or web backends.</p>
+            <div class="course-meta"><span>~8 weeks</span><span>Self-paced</span></div>
+            <a href="programming-lessons.html" class="btn btn-outline btn-sm">Start learning</a>
+          </article>
+        </div>
+        <div class="text-center mt-4" style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
+          <a href="programming-lessons.html" class="btn btn-secondary">View all courses</a>
+          <a href="exams.html" class="btn btn-outline">Take a practice exam</a>
+          <a href="badges.html" class="btn btn-ghost">View achievement badges</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="section approach-section">
+      <div class="tech-lines-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="two-col">
+          <div class="reveal">
+            <p class="section-eyebrow">Approach</p>
+            <h2>We build things that people can use without a manual</h2>
+            <p>Technology only helps when it fits the people who use it. We spend time understanding workflows before writing code. We prefer clear interfaces over flashy ones.</p>
+            <p>Whether you need a school system, a custom business tool, or structured programming training, we aim for the same standard: reliable, understandable and supportable.</p>
+            <a href="about.html" class="btn btn-outline mt-2">About NE3XA</a>
+            <a href="values.html" class="btn btn-ghost mt-2">Our values</a>
+          </div>
+          <div class="reveal">
+            <div class="img-ph img-ph-lg" >
+              <img src="./images/systemDesign.jpg" alt="" srcset="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Team / People we work with -->
+    <section class="team-section" id="team">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Our network</p>
+          <h2>Over 14 developers &amp; specialists we work with</h2>
+          <p class="lead">A distributed team of engineers, designers and educators building reliable products across Africa and beyond.</p>
+        </div>
+      </div>
+     <div class="team-slider-wrap">
+        <div class="team-slider" id="team-slider" role="list">
+
+          <article class="team-card" role="listitem">
+            <div class="team-photo">
+              <img src="images/switney.jpg" alt="Switney">
+            </div>
+            <h3>Switney</h3>
+            <p class="role">IT Specialist</p>
+          </article>
+
+          <article class="team-card" role="listitem">
+            <div class="team-photo">
+              <img src="images/favour.jpeg" alt="Favour">
+            </div>
+            <h3>Favour</h3>
+            <p class="role">Full-stack Dev</p>
+          </article>
+
+          <article class="team-card" role="listitem">
+            <div class="team-photo">
+              <img src="images/lynet.jpeg" alt="Lynet">
+            </div>
+            <h3>Lynet</h3>
+            <p class="role">Frontend dev (BCS)</p>
+          </article>
+
+          <article class="team-card" role="listitem">
+            <div class="team-photo">
+              <img src="images/vanessa.jpeg" alt="Vanessa">
+            </div>
+            <h3>Vanessa</h3>
+            <p class="role">IT Specialist</p>
+          </article>
+
+          <article class="team-card" role="listitem">
+            <div class="team-photo">
+              <img src="images/kevin.jpg" alt="Kevin">
+            </div>
+            <h3>Kevin</h3>
+            <p class="role">CEH (CTF Player)</p>
+          </article>
+
+          <article class="team-card" role="listitem">
+            <div class="team-photo">
+              <img src="images/rympson.jpeg" alt="Rympson">
+            </div>
+            <h3>Rympson</h3>
+            <p class="role">Cyber security</p>
+          </article>
+
+           <article class="team-card" role="listitem">
+            <div class="team-photo">
+              <img src="images/alexandria.jpeg" alt="Alexandria">
+            </div>
+            <h3>Alexandria</h3>
+            <p class="role">Graphics Designer</p>
+          </article>
+
+          <article class="team-card" role="listitem">
+            <div class="team-photo">
+              <img src="https://s3.us-east-1.amazonaws.com/victoria-university-elearning/website/images/gallery/9e1b82d3-3c73-45a9-8500-e94e0f51fac5.jpeg" alt="Ian - Frontend developer">
+            </div>
+            <h3>Ian</h3>
+            <p class="role">Frontend dev (BCS)</p>
+          </article>
+
+          <article class="team-card" role="listitem">
+            <div class="team-photo">
+              <img src="images/ibra.jpeg" alt="Ibra">
+            </div>
+            <h3>Ibra</h3>
+            <p class="role">Software Engineer</p>
+          </article>
+
+          <article class="team-card" role="listitem">
+            <div class="team-photo">
+              <img src="images/janat.jpeg" alt="Janat">
+            </div>
+            <h3>Janat</h3>
+            <p class="role">Software Dev</p>
+          </article>
+
+                  </div>
+
+        <div class="team-nav">
+          <button type="button" class="team-nav-btn" id="team-prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button type="button" class="team-nav-btn" id="team-next" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="team-progress"><div class="team-progress-fill" id="team-progress"></div></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section bg-dark cta-africa">
+
+        <div class="cta-africa-bg" aria-hidden="true">
+          <svg viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg">
+            <!-- Dot-map of Africa (simplified silhouette) -->
+            <circle class="dot" cx="180" cy="40" r="2.2"/>
+            <circle class="dot" cx="188" cy="45" r="2.2"/>
+            <circle class="dot" cx="174" cy="48" r="1.6"/>
+            <circle class="dot" cx="190" cy="36" r="2.2"/>
+            <circle class="dot" cx="172" cy="34" r="2.2"/>
+            <circle class="dot" cx="184" cy="52" r="2.2"/>
+            <circle class="dot" cx="200" cy="35" r="2.2"/>
+            <circle class="dot" cx="208" cy="40" r="2.2"/>
+            <circle class="dot" cx="194" cy="43" r="1.6"/>
+            <circle class="dot" cx="210" cy="31" r="2.2"/>
+            <circle class="dot" cx="192" cy="29" r="2.2"/>
+            <circle class="dot" cx="204" cy="47" r="2.2"/>
+            <circle class="dot" cx="220" cy="38" r="1.6"/>
+            <circle class="dot" cx="228" cy="43" r="2.2"/>
+            <circle class="dot" cx="214" cy="46" r="2.2"/>
+            <circle class="dot" cx="230" cy="34" r="1.6"/>
+            <circle class="dot" cx="224" cy="50" r="2.2"/>
+            <circle class="dot" cx="240" cy="42" r="1.6"/>
+            <circle class="dot" cx="248" cy="47" r="2.2"/>
+            <circle class="dot" cx="234" cy="50" r="2.2"/>
+            <circle class="dot" cx="250" cy="38" r="1.6"/>
+            <circle class="dot" cx="232" cy="36" r="2.2"/>
+            <circle class="dot" cx="244" cy="54" r="2.2"/>
+            <circle class="dot" cx="160" cy="50" r="1.6"/>
+            <circle class="dot" cx="168" cy="55" r="2.2"/>
+            <circle class="dot" cx="154" cy="58" r="2.2"/>
+            <circle class="dot" cx="170" cy="46" r="1.6"/>
+            <circle class="dot" cx="152" cy="44" r="2.2"/>
+            <circle class="dot" cx="164" cy="62" r="2.2"/>
+            <circle class="dot" cx="250" cy="48" r="2.2"/>
+            <circle class="dot" cx="258" cy="53" r="2.2"/>
+            <circle class="dot" cx="260" cy="44" r="2.2"/>
+            <circle class="dot" cx="254" cy="60" r="2.2"/>
+            <circle class="dot" cx="140" cy="60" r="2.2"/>
+            <circle class="dot" cx="148" cy="65" r="1.6"/>
+            <circle class="dot" cx="134" cy="68" r="2.2"/>
+            <circle class="dot" cx="150" cy="56" r="2.2"/>
+            <circle class="dot" cx="132" cy="54" r="1.6"/>
+            <circle class="dot" cx="144" cy="72" r="1.6"/>
+            <circle class="dot" cx="268" cy="60" r="2.2"/>
+            <circle class="dot" cx="270" cy="51" r="1.6"/>
+            <circle class="dot" cx="264" cy="67" r="2.2"/>
+            <circle class="dot" cx="150" cy="70" r="2.2"/>
+            <circle class="dot" cx="158" cy="75" r="2.2"/>
+            <circle class="dot" cx="144" cy="78" r="1.6"/>
+            <circle class="dot" cx="160" cy="66" r="2.2"/>
+            <circle class="dot" cx="142" cy="64" r="2.2"/>
+            <circle class="dot" cx="154" cy="82" r="2.2"/>
+            <circle class="dot" cx="270" cy="65" r="2.2"/>
+            <circle class="dot" cx="278" cy="70" r="1.6"/>
+            <circle class="dot" cx="264" cy="73" r="2.2"/>
+            <circle class="dot" cx="280" cy="61" r="2.2"/>
+            <circle class="dot" cx="262" cy="59" r="1.6"/>
+            <circle class="dot" cx="274" cy="77" r="1.6"/>
+            <circle class="dot" cx="130" cy="80" r="1.6"/>
+            <circle class="dot" cx="138" cy="85" r="2.2"/>
+            <circle class="dot" cx="124" cy="88" r="2.2"/>
+            <circle class="dot" cx="140" cy="76" r="1.6"/>
+            <circle class="dot" cx="122" cy="74" r="2.2"/>
+            <circle class="dot" cx="134" cy="92" r="2.2"/>
+            <circle class="dot" cx="280" cy="75" r="2.2"/>
+            <circle class="dot" cx="288" cy="80" r="2.2"/>
+            <circle class="dot" cx="274" cy="83" r="1.6"/>
+            <circle class="dot" cx="290" cy="71" r="2.2"/>
+            <circle class="dot" cx="272" cy="69" r="2.2"/>
+            <circle class="dot" cx="284" cy="87" r="2.2"/>
+            <circle class="dot" cx="120" cy="95" r="2.2"/>
+            <circle class="dot" cx="128" cy="100" r="1.6"/>
+            <circle class="dot" cx="114" cy="103" r="2.2"/>
+            <circle class="dot" cx="112" cy="89" r="1.6"/>
+            <circle class="dot" cx="124" cy="107" r="1.6"/>
+            <circle class="dot" cx="290" cy="90" r="2.2"/>
+            <circle class="dot" cx="298" cy="95" r="1.6"/>
+            <circle class="dot" cx="284" cy="98" r="2.2"/>
+            <circle class="dot" cx="300" cy="86" r="2.2"/>
+            <circle class="dot" cx="294" cy="102" r="1.6"/>
+            <circle class="dot" cx="100" cy="110" r="1.6"/>
+            <circle class="dot" cx="108" cy="115" r="2.2"/>
+            <circle class="dot" cx="94" cy="118" r="2.2"/>
+            <circle class="dot" cx="110" cy="106" r="1.6"/>
+            <circle class="dot" cx="92" cy="104" r="2.2"/>
+            <circle class="dot" cx="104" cy="122" r="2.2"/>
+            <circle class="dot" cx="90" cy="130" r="2.2"/>
+            <circle class="dot" cx="98" cy="135" r="2.2"/>
+            <circle class="dot" cx="84" cy="138" r="1.6"/>
+            <circle class="dot" cx="100" cy="126" r="2.2"/>
+            <circle class="dot" cx="82" cy="124" r="2.2"/>
+            <circle class="dot" cx="94" cy="142" r="2.2"/>
+            <circle class="dot" cx="85" cy="150" r="2.2"/>
+            <circle class="dot" cx="93" cy="155" r="2.2"/>
+            <circle class="dot" cx="79" cy="158" r="1.6"/>
+            <circle class="dot" cx="77" cy="144" r="2.2"/>
+            <circle class="dot" cx="89" cy="162" r="2.2"/>
+            <circle class="dot" cx="95" cy="170" r="2.2"/>
+            <circle class="dot" cx="103" cy="175" r="2.2"/>
+            <circle class="dot" cx="89" cy="178" r="1.6"/>
+            <circle class="dot" cx="105" cy="166" r="2.2"/>
+            <circle class="dot" cx="87" cy="164" r="2.2"/>
+            <circle class="dot" cx="99" cy="182" r="2.2"/>
+            <circle class="dot" cx="110" cy="185" r="2.2"/>
+            <circle class="dot" cx="118" cy="190" r="2.2"/>
+            <circle class="dot" cx="104" cy="193" r="1.6"/>
+            <circle class="dot" cx="120" cy="181" r="2.2"/>
+            <circle class="dot" cx="102" cy="179" r="2.2"/>
+            <circle class="dot" cx="114" cy="197" r="2.2"/>
+            <circle class="dot" cx="130" cy="195" r="2.2"/>
+            <circle class="dot" cx="138" cy="200" r="2.2"/>
+            <circle class="dot" cx="124" cy="203" r="1.6"/>
+            <circle class="dot" cx="140" cy="191" r="2.2"/>
+            <circle class="dot" cx="134" cy="207" r="2.2"/>
+            <circle class="dot" cx="150" cy="200" r="2.2"/>
+            <circle class="dot" cx="158" cy="205" r="1.6"/>
+            <circle class="dot" cx="144" cy="208" r="2.2"/>
+            <circle class="dot" cx="160" cy="196" r="2.2"/>
+            <circle class="dot" cx="142" cy="194" r="1.6"/>
+            <circle class="dot" cx="154" cy="212" r="1.6"/>
+            <circle class="dot" cx="170" cy="210" r="2.2"/>
+            <circle class="dot" cx="178" cy="215" r="1.6"/>
+            <circle class="dot" cx="164" cy="218" r="2.2"/>
+            <circle class="dot" cx="180" cy="206" r="2.2"/>
+            <circle class="dot" cx="162" cy="204" r="1.6"/>
+            <circle class="dot" cx="174" cy="222" r="1.6"/>
+            <circle class="dot" cx="190" cy="215" r="1.6"/>
+            <circle class="dot" cx="198" cy="220" r="2.2"/>
+            <circle class="dot" cx="184" cy="223" r="2.2"/>
+            <circle class="dot" cx="200" cy="211" r="1.6"/>
+            <circle class="dot" cx="182" cy="209" r="2.2"/>
+            <circle class="dot" cx="194" cy="227" r="2.2"/>
+            <circle class="dot" cx="210" cy="210" r="1.6"/>
+            <circle class="dot" cx="218" cy="215" r="2.2"/>
+            <circle class="dot" cx="204" cy="218" r="2.2"/>
+            <circle class="dot" cx="220" cy="206" r="1.6"/>
+            <circle class="dot" cx="202" cy="204" r="2.2"/>
+            <circle class="dot" cx="214" cy="222" r="2.2"/>
+            <circle class="dot" cx="230" cy="200" r="2.2"/>
+            <circle class="dot" cx="238" cy="205" r="2.2"/>
+            <circle class="dot" cx="224" cy="208" r="1.6"/>
+            <circle class="dot" cx="240" cy="196" r="2.2"/>
+            <circle class="dot" cx="222" cy="194" r="2.2"/>
+            <circle class="dot" cx="234" cy="212" r="2.2"/>
+            <circle class="dot" cx="250" cy="190" r="2.2"/>
+            <circle class="dot" cx="258" cy="195" r="1.6"/>
+            <circle class="dot" cx="244" cy="198" r="2.2"/>
+            <circle class="dot" cx="260" cy="186" r="2.2"/>
+            <circle class="dot" cx="242" cy="184" r="1.6"/>
+            <circle class="dot" cx="254" cy="202" r="1.6"/>
+            <circle class="dot" cx="160" cy="230" r="1.6"/>
+            <circle class="dot" cx="168" cy="235" r="2.2"/>
+            <circle class="dot" cx="154" cy="238" r="2.2"/>
+            <circle class="dot" cx="170" cy="226" r="1.6"/>
+            <circle class="dot" cx="152" cy="224" r="2.2"/>
+            <circle class="dot" cx="164" cy="242" r="2.2"/>
+            <circle class="dot" cx="180" cy="240" r="1.6"/>
+            <circle class="dot" cx="188" cy="245" r="2.2"/>
+            <circle class="dot" cx="174" cy="248" r="2.2"/>
+            <circle class="dot" cx="190" cy="236" r="1.6"/>
+            <circle class="dot" cx="172" cy="234" r="2.2"/>
+            <circle class="dot" cx="184" cy="252" r="2.2"/>
+            <circle class="dot" cx="200" cy="245" r="2.2"/>
+            <circle class="dot" cx="208" cy="250" r="2.2"/>
+            <circle class="dot" cx="194" cy="253" r="1.6"/>
+            <circle class="dot" cx="210" cy="241" r="2.2"/>
+            <circle class="dot" cx="192" cy="239" r="2.2"/>
+            <circle class="dot" cx="204" cy="257" r="2.2"/>
+            <circle class="dot" cx="220" cy="235" r="2.2"/>
+            <circle class="dot" cx="228" cy="240" r="1.6"/>
+            <circle class="dot" cx="214" cy="243" r="2.2"/>
+            <circle class="dot" cx="230" cy="231" r="2.2"/>
+            <circle class="dot" cx="212" cy="229" r="1.6"/>
+            <circle class="dot" cx="224" cy="247" r="1.6"/>
+            <circle class="dot" cx="240" cy="220" r="2.2"/>
+            <circle class="dot" cx="248" cy="225" r="2.2"/>
+            <circle class="dot" cx="234" cy="228" r="1.6"/>
+            <circle class="dot" cx="250" cy="216" r="2.2"/>
+            <circle class="dot" cx="232" cy="214" r="2.2"/>
+            <circle class="dot" cx="244" cy="232" r="2.2"/>
+            <circle class="dot" cx="260" cy="180" r="2.2"/>
+            <circle class="dot" cx="268" cy="185" r="1.6"/>
+            <circle class="dot" cx="254" cy="188" r="2.2"/>
+            <circle class="dot" cx="270" cy="176" r="2.2"/>
+            <circle class="dot" cx="252" cy="174" r="1.6"/>
+            <circle class="dot" cx="264" cy="192" r="1.6"/>
+            <circle class="dot" cx="275" cy="160" r="1.6"/>
+            <circle class="dot" cx="283" cy="165" r="2.2"/>
+            <circle class="dot" cx="269" cy="168" r="2.2"/>
+            <circle class="dot" cx="285" cy="156" r="1.6"/>
+            <circle class="dot" cx="267" cy="154" r="2.2"/>
+            <circle class="dot" cx="279" cy="172" r="2.2"/>
+            <circle class="dot" cx="285" cy="140" r="2.2"/>
+            <circle class="dot" cx="293" cy="145" r="1.6"/>
+            <circle class="dot" cx="279" cy="148" r="2.2"/>
+            <circle class="dot" cx="295" cy="136" r="2.2"/>
+            <circle class="dot" cx="277" cy="134" r="1.6"/>
+            <circle class="dot" cx="289" cy="152" r="1.6"/>
+            <circle class="dot" cx="290" cy="120" r="2.2"/>
+            <circle class="dot" cx="298" cy="125" r="1.6"/>
+            <circle class="dot" cx="284" cy="128" r="2.2"/>
+            <circle class="dot" cx="300" cy="116" r="2.2"/>
+            <circle class="dot" cx="282" cy="114" r="1.6"/>
+            <circle class="dot" cx="294" cy="132" r="1.6"/>
+            <circle class="dot" cx="280" cy="100" r="2.2"/>
+            <circle class="dot" cx="288" cy="105" r="1.6"/>
+            <circle class="dot" cx="274" cy="108" r="2.2"/>
+            <circle class="dot" cx="290" cy="96" r="2.2"/>
+            <circle class="dot" cx="272" cy="94" r="1.6"/>
+            <circle class="dot" cx="270" cy="200" r="2.2"/>
+            <circle class="dot" cx="278" cy="205" r="1.6"/>
+            <circle class="dot" cx="264" cy="208" r="2.2"/>
+            <circle class="dot" cx="280" cy="196" r="2.2"/>
+            <circle class="dot" cx="274" cy="212" r="1.6"/>
+            <circle class="dot" cx="280" cy="220" r="2.2"/>
+            <circle class="dot" cx="288" cy="225" r="1.6"/>
+            <circle class="dot" cx="274" cy="228" r="2.2"/>
+            <circle class="dot" cx="290" cy="216" r="2.2"/>
+            <circle class="dot" cx="272" cy="214" r="1.6"/>
+            <circle class="dot" cx="284" cy="232" r="1.6"/>
+            <circle class="dot" cx="290" cy="240" r="2.2"/>
+            <circle class="dot" cx="298" cy="245" r="1.6"/>
+            <circle class="dot" cx="284" cy="248" r="2.2"/>
+            <circle class="dot" cx="300" cy="236" r="2.2"/>
+            <circle class="dot" cx="294" cy="252" r="1.6"/>
+            <circle class="dot" cx="300" cy="255" r="1.6"/>
+            <circle class="dot" cx="308" cy="260" r="2.2"/>
+            <circle class="dot" cx="294" cy="263" r="2.2"/>
+            <circle class="dot" cx="310" cy="251" r="1.6"/>
+            <circle class="dot" cx="304" cy="267" r="2.2"/>
+            <circle class="dot" cx="295" cy="270" r="2.2"/>
+            <circle class="dot" cx="303" cy="275" r="2.2"/>
+            <circle class="dot" cx="289" cy="278" r="1.6"/>
+            <circle class="dot" cx="287" cy="264" r="2.2"/>
+            <circle class="dot" cx="299" cy="282" r="2.2"/>
+            <circle class="dot" cx="310" cy="150" r="2.2"/>
+            <circle class="dot" cx="318" cy="155" r="2.2"/>
+            <circle class="dot" cx="304" cy="158" r="1.6"/>
+            <circle class="dot" cx="320" cy="146" r="2.2"/>
+            <circle class="dot" cx="302" cy="144" r="2.2"/>
+            <circle class="dot" cx="314" cy="162" r="2.2"/>
+            <circle class="dot" cx="320" cy="140" r="2.2"/>
+            <circle class="dot" cx="328" cy="145" r="2.2"/>
+            <circle class="dot" cx="330" cy="136" r="2.2"/>
+            <circle class="dot" cx="312" cy="134" r="2.2"/>
+            <circle class="dot" cx="324" cy="152" r="2.2"/>
+            <circle class="dot" cx="338" cy="150" r="2.2"/>
+            <circle class="dot" cx="324" cy="153" r="1.6"/>
+            <circle class="dot" cx="340" cy="141" r="2.2"/>
+            <circle class="dot" cx="322" cy="139" r="2.2"/>
+            <circle class="dot" cx="334" cy="157" r="2.2"/>
+            <circle class="dot" cx="335" cy="160" r="1.6"/>
+            <circle class="dot" cx="343" cy="165" r="2.2"/>
+            <circle class="dot" cx="329" cy="168" r="2.2"/>
+            <circle class="dot" cx="345" cy="156" r="1.6"/>
+            <circle class="dot" cx="339" cy="172" r="2.2"/>
+            <circle class="dot" cx="325" cy="175" r="2.2"/>
+            <circle class="dot" cx="333" cy="180" r="1.6"/>
+            <circle class="dot" cx="319" cy="183" r="2.2"/>
+            <circle class="dot" cx="335" cy="171" r="2.2"/>
+            <circle class="dot" cx="317" cy="169" r="1.6"/>
+            <circle class="dot" cx="329" cy="187" r="1.6"/>
+            <circle class="dot" cx="200" cy="260" r="2.2"/>
+            <circle class="dot" cx="208" cy="265" r="2.2"/>
+            <circle class="dot" cx="194" cy="268" r="1.6"/>
+            <circle class="dot" cx="210" cy="256" r="2.2"/>
+            <circle class="dot" cx="204" cy="272" r="2.2"/>
+            <circle class="dot" cx="180" cy="280" r="2.2"/>
+            <circle class="dot" cx="188" cy="285" r="2.2"/>
+            <circle class="dot" cx="174" cy="288" r="1.6"/>
+            <circle class="dot" cx="190" cy="276" r="2.2"/>
+            <circle class="dot" cx="172" cy="274" r="2.2"/>
+            <circle class="dot" cx="184" cy="292" r="2.2"/>
+            <circle class="dot" cx="170" cy="300" r="2.2"/>
+            <circle class="dot" cx="178" cy="305" r="1.6"/>
+            <circle class="dot" cx="164" cy="308" r="2.2"/>
+            <circle class="dot" cx="180" cy="296" r="2.2"/>
+            <circle class="dot" cx="162" cy="294" r="1.6"/>
+            <circle class="dot" cx="174" cy="312" r="1.6"/>
+            <circle class="dot" cx="175" cy="320" r="1.6"/>
+            <circle class="dot" cx="183" cy="325" r="2.2"/>
+            <circle class="dot" cx="169" cy="328" r="2.2"/>
+            <circle class="dot" cx="185" cy="316" r="1.6"/>
+            <circle class="dot" cx="167" cy="314" r="2.2"/>
+            <circle class="dot" cx="179" cy="332" r="2.2"/>
+            <circle class="dot" cx="185" cy="340" r="1.6"/>
+            <circle class="dot" cx="193" cy="345" r="2.2"/>
+            <circle class="dot" cx="179" cy="348" r="2.2"/>
+            <circle class="dot" cx="195" cy="336" r="1.6"/>
+            <circle class="dot" cx="177" cy="334" r="2.2"/>
+            <circle class="dot" cx="189" cy="352" r="2.2"/>
+            <circle class="dot" cx="200" cy="355" r="1.6"/>
+            <circle class="dot" cx="208" cy="360" r="2.2"/>
+            <circle class="dot" cx="194" cy="363" r="2.2"/>
+            <circle class="dot" cx="210" cy="351" r="1.6"/>
+            <circle class="dot" cx="204" cy="367" r="2.2"/>
+            <circle class="dot" cx="220" cy="360" r="2.2"/>
+            <circle class="dot" cx="228" cy="365" r="2.2"/>
+            <circle class="dot" cx="214" cy="368" r="1.6"/>
+            <circle class="dot" cx="230" cy="356" r="2.2"/>
+            <circle class="dot" cx="212" cy="354" r="2.2"/>
+            <circle class="dot" cx="224" cy="372" r="2.2"/>
+            <circle class="dot" cx="240" cy="350" r="2.2"/>
+            <circle class="dot" cx="248" cy="355" r="1.6"/>
+            <circle class="dot" cx="234" cy="358" r="2.2"/>
+            <circle class="dot" cx="250" cy="346" r="2.2"/>
+            <circle class="dot" cx="232" cy="344" r="1.6"/>
+            <circle class="dot" cx="244" cy="362" r="1.6"/>
+            <circle class="dot" cx="250" cy="330" r="2.2"/>
+            <circle class="dot" cx="258" cy="335" r="2.2"/>
+            <circle class="dot" cx="244" cy="338" r="1.6"/>
+            <circle class="dot" cx="260" cy="326" r="2.2"/>
+            <circle class="dot" cx="242" cy="324" r="2.2"/>
+            <circle class="dot" cx="254" cy="342" r="2.2"/>
+            <circle class="dot" cx="255" cy="310" r="2.2"/>
+            <circle class="dot" cx="263" cy="315" r="2.2"/>
+            <circle class="dot" cx="249" cy="318" r="1.6"/>
+            <circle class="dot" cx="265" cy="306" r="2.2"/>
+            <circle class="dot" cx="247" cy="304" r="2.2"/>
+            <circle class="dot" cx="245" cy="290" r="2.2"/>
+            <circle class="dot" cx="253" cy="295" r="2.2"/>
+            <circle class="dot" cx="239" cy="298" r="1.6"/>
+            <circle class="dot" cx="255" cy="286" r="2.2"/>
+            <circle class="dot" cx="237" cy="284" r="2.2"/>
+            <circle class="dot" cx="249" cy="302" r="2.2"/>
+            <circle class="dot" cx="230" cy="275" r="2.2"/>
+            <circle class="dot" cx="224" cy="283" r="1.6"/>
+            <circle class="dot" cx="240" cy="271" r="2.2"/>
+            <circle class="dot" cx="222" cy="269" r="2.2"/>
+            <circle class="dot" cx="234" cy="287" r="2.2"/>
+            <circle class="dot" cx="210" cy="320" r="2.2"/>
+            <circle class="dot" cx="218" cy="325" r="1.6"/>
+            <circle class="dot" cx="204" cy="328" r="2.2"/>
+            <circle class="dot" cx="220" cy="316" r="2.2"/>
+            <circle class="dot" cx="202" cy="314" r="1.6"/>
+            <circle class="dot" cx="214" cy="332" r="1.6"/>
+            <circle class="dot" cx="203" cy="350" r="2.2"/>
+            <circle class="dot" cx="205" cy="341" r="1.6"/>
+            <circle class="dot" cx="187" cy="339" r="2.2"/>
+            <circle class="dot" cx="199" cy="357" r="2.2"/>
+            <circle class="dot" cx="215" cy="370" r="1.6"/>
+            <circle class="dot" cx="209" cy="378" r="2.2"/>
+            <circle class="dot" cx="219" cy="382" r="2.2"/>
+            <circle class="dot" cx="230" cy="380" r="2.2"/>
+            <circle class="dot" cx="238" cy="385" r="2.2"/>
+            <circle class="dot" cx="224" cy="388" r="1.6"/>
+            <circle class="dot" cx="240" cy="376" r="2.2"/>
+            <circle class="dot" cx="234" cy="392" r="2.2"/>
+            <circle class="dot" cx="245" cy="375" r="2.2"/>
+            <circle class="dot" cx="253" cy="380" r="1.6"/>
+            <circle class="dot" cx="255" cy="371" r="2.2"/>
+            <circle class="dot" cx="237" cy="369" r="1.6"/>
+            <circle class="dot" cx="249" cy="387" r="1.6"/>
+            <circle class="dot" cx="255" cy="360" r="1.6"/>
+            <circle class="dot" cx="263" cy="365" r="2.2"/>
+            <circle class="dot" cx="249" cy="368" r="2.2"/>
+            <circle class="dot" cx="265" cy="356" r="1.6"/>
+            <circle class="dot" cx="259" cy="372" r="2.2"/>
+            <circle class="dot" cx="320" cy="300" r="2.2"/>
+            <circle class="dot" cx="328" cy="305" r="1.6"/>
+            <circle class="dot" cx="314" cy="308" r="2.2"/>
+            <circle class="dot" cx="330" cy="296" r="2.2"/>
+            <circle class="dot" cx="312" cy="294" r="1.6"/>
+            <circle class="dot" cx="324" cy="312" r="1.6"/>
+            <circle class="dot" cx="325" cy="320" r="1.6"/>
+            <circle class="dot" cx="333" cy="325" r="2.2"/>
+            <circle class="dot" cx="319" cy="328" r="2.2"/>
+            <circle class="dot" cx="335" cy="316" r="1.6"/>
+            <circle class="dot" cx="317" cy="314" r="2.2"/>
+            <circle class="dot" cx="329" cy="332" r="2.2"/>
+            <circle class="dot" cx="330" cy="340" r="2.2"/>
+            <circle class="dot" cx="338" cy="345" r="2.2"/>
+            <circle class="dot" cx="324" cy="348" r="1.6"/>
+            <circle class="dot" cx="340" cy="336" r="2.2"/>
+            <circle class="dot" cx="322" cy="334" r="2.2"/>
+            <circle class="dot" cx="334" cy="352" r="2.2"/>
+            <circle class="dot" cx="325" cy="355" r="2.2"/>
+            <circle class="dot" cx="333" cy="360" r="1.6"/>
+            <circle class="dot" cx="319" cy="363" r="2.2"/>
+            <circle class="dot" cx="317" cy="349" r="1.6"/>
+            <circle class="dot" cx="329" cy="367" r="1.6"/>
+            <circle class="dot" cx="315" cy="345" r="1.6"/>
+            <circle class="dot" cx="309" cy="353" r="2.2"/>
+            <circle class="dot" cx="325" cy="341" r="1.6"/>
+            <circle class="dot" cx="307" cy="339" r="2.2"/>
+            <circle class="dot" cx="160" cy="120" r="2.2"/>
+            <circle class="dot" cx="168" cy="125" r="2.2"/>
+            <circle class="dot" cx="154" cy="128" r="1.6"/>
+            <circle class="dot" cx="170" cy="116" r="2.2"/>
+            <circle class="dot" cx="152" cy="114" r="2.2"/>
+            <circle class="dot" cx="164" cy="132" r="2.2"/>
+            <circle class="dot" cx="180" cy="100" r="2.2"/>
+            <circle class="dot" cx="188" cy="105" r="2.2"/>
+            <circle class="dot" cx="174" cy="108" r="1.6"/>
+            <circle class="dot" cx="190" cy="96" r="2.2"/>
+            <circle class="dot" cx="172" cy="94" r="2.2"/>
+            <circle class="dot" cx="184" cy="112" r="2.2"/>
+            <circle class="dot" cx="200" cy="90" r="2.2"/>
+            <circle class="dot" cx="208" cy="95" r="1.6"/>
+            <circle class="dot" cx="210" cy="86" r="2.2"/>
+            <circle class="dot" cx="192" cy="84" r="1.6"/>
+            <circle class="dot" cx="204" cy="102" r="1.6"/>
+            <circle class="dot" cx="220" cy="100" r="2.2"/>
+            <circle class="dot" cx="228" cy="105" r="1.6"/>
+            <circle class="dot" cx="214" cy="108" r="2.2"/>
+            <circle class="dot" cx="230" cy="96" r="2.2"/>
+            <circle class="dot" cx="224" cy="112" r="1.6"/>
+            <circle class="dot" cx="240" cy="120" r="1.6"/>
+            <circle class="dot" cx="248" cy="125" r="2.2"/>
+            <circle class="dot" cx="234" cy="128" r="2.2"/>
+            <circle class="dot" cx="250" cy="116" r="1.6"/>
+            <circle class="dot" cx="232" cy="114" r="2.2"/>
+            <circle class="dot" cx="244" cy="132" r="2.2"/>
+            <circle class="dot" cx="200" cy="140" r="2.2"/>
+            <circle class="dot" cx="208" cy="145" r="2.2"/>
+            <circle class="dot" cx="194" cy="148" r="1.6"/>
+            <circle class="dot" cx="210" cy="136" r="2.2"/>
+            <circle class="dot" cx="192" cy="134" r="2.2"/>
+            <circle class="dot" cx="204" cy="152" r="2.2"/>
+            <circle class="dot" cx="160" cy="160" r="2.2"/>
+            <circle class="dot" cx="168" cy="165" r="1.6"/>
+            <circle class="dot" cx="154" cy="168" r="2.2"/>
+            <circle class="dot" cx="170" cy="156" r="2.2"/>
+            <circle class="dot" cx="152" cy="154" r="1.6"/>
+            <circle class="dot" cx="164" cy="172" r="1.6"/>
+            <circle class="dot" cx="200" cy="160" r="1.6"/>
+            <circle class="dot" cx="208" cy="165" r="2.2"/>
+            <circle class="dot" cx="194" cy="168" r="2.2"/>
+            <circle class="dot" cx="210" cy="156" r="1.6"/>
+            <circle class="dot" cx="192" cy="154" r="2.2"/>
+            <circle class="dot" cx="204" cy="172" r="2.2"/>
+            <circle class="dot" cx="240" cy="160" r="2.2"/>
+            <circle class="dot" cx="248" cy="165" r="2.2"/>
+            <circle class="dot" cx="234" cy="168" r="1.6"/>
+            <circle class="dot" cx="250" cy="156" r="2.2"/>
+            <circle class="dot" cx="232" cy="154" r="2.2"/>
+            <circle class="dot" cx="244" cy="172" r="2.2"/>
+            <circle class="dot" cx="180" cy="180" r="1.6"/>
+            <circle class="dot" cx="188" cy="185" r="2.2"/>
+            <circle class="dot" cx="174" cy="188" r="2.2"/>
+            <circle class="dot" cx="190" cy="176" r="1.6"/>
+            <circle class="dot" cx="172" cy="174" r="2.2"/>
+            <circle class="dot" cx="184" cy="192" r="2.2"/>
+            <circle class="dot" cx="220" cy="180" r="2.2"/>
+            <circle class="dot" cx="228" cy="185" r="2.2"/>
+            <circle class="dot" cx="214" cy="188" r="1.6"/>
+            <circle class="dot" cx="230" cy="176" r="2.2"/>
+            <circle class="dot" cx="212" cy="174" r="2.2"/>
+            <circle class="dot" cx="140" cy="140" r="2.2"/>
+            <circle class="dot" cx="148" cy="145" r="2.2"/>
+            <circle class="dot" cx="134" cy="148" r="1.6"/>
+            <circle class="dot" cx="150" cy="136" r="2.2"/>
+            <circle class="dot" cx="132" cy="134" r="2.2"/>
+            <circle class="dot" cx="144" cy="152" r="2.2"/>
+            <circle class="dot" cx="280" cy="160" r="2.2"/>
+            <circle class="dot" cx="288" cy="165" r="1.6"/>
+            <circle class="dot" cx="274" cy="168" r="2.2"/>
+            <circle class="dot" cx="272" cy="154" r="1.6"/>
+            <circle class="dot" cx="284" cy="172" r="1.6"/>
+            <circle class="dot" cx="150" cy="250" r="2.2"/>
+            <circle class="dot" cx="158" cy="255" r="2.2"/>
+            <circle class="dot" cx="144" cy="258" r="1.6"/>
+            <circle class="dot" cx="160" cy="246" r="2.2"/>
+            <circle class="dot" cx="142" cy="244" r="2.2"/>
+            <circle class="dot" cx="154" cy="262" r="2.2"/>
+            <circle class="dot" cx="230" cy="250" r="1.6"/>
+            <circle class="dot" cx="238" cy="255" r="2.2"/>
+            <circle class="dot" cx="224" cy="258" r="2.2"/>
+            <circle class="dot" cx="240" cy="246" r="1.6"/>
+            <circle class="dot" cx="234" cy="262" r="2.2"/>
+            <circle class="dot" cx="190" cy="290" r="1.6"/>
+            <circle class="dot" cx="198" cy="295" r="2.2"/>
+            <circle class="dot" cx="184" cy="298" r="2.2"/>
+            <circle class="dot" cx="200" cy="286" r="1.6"/>
+            <circle class="dot" cx="194" cy="302" r="2.2"/>
+            <circle class="dot" cx="210" cy="300" r="1.6"/>
+            <circle class="dot" cx="218" cy="305" r="2.2"/>
+            <circle class="dot" cx="204" cy="308" r="2.2"/>
+            <circle class="dot" cx="220" cy="296" r="1.6"/>
+            <circle class="dot" cx="202" cy="294" r="2.2"/>
+            <circle class="dot" cx="214" cy="312" r="2.2"/>
+            <circle class="dot" cx="190" cy="330" r="2.2"/>
+            <circle class="dot" cx="198" cy="335" r="2.2"/>
+            <circle class="dot" cx="200" cy="326" r="2.2"/>
+            <circle class="dot" cx="194" cy="342" r="2.2"/>
+            <circle class="dot" cx="220" cy="340" r="2.2"/>
+            <circle class="dot" cx="228" cy="345" r="1.6"/>
+            <circle class="dot" cx="214" cy="348" r="2.2"/>
+            <circle class="dot" cx="230" cy="336" r="2.2"/>
+            <circle class="dot" cx="212" cy="334" r="1.6"/>
+            <circle class="dot" cx="224" cy="352" r="1.6"/>
+            <circle class="dot" cx="200" cy="200" r="2.2"/>
+            <circle class="dot" cx="208" cy="205" r="2.2"/>
+            <circle class="dot" cx="194" cy="208" r="1.6"/>
+            <circle class="dot" cx="210" cy="196" r="2.2"/>
+            <circle class="dot" cx="192" cy="194" r="2.2"/>
+            <circle class="dot" cx="204" cy="212" r="2.2"/>
+            <circle class="dot" cx="170" cy="220" r="1.6"/>
+            <circle class="dot" cx="178" cy="225" r="2.2"/>
+          </svg>
+        </div>
+      <div class="container text-center">
+        <h2 style="margin-bottom:1rem;">Ready to talk about a project?</h2>
+        <p style="max-width:32em;margin:0 auto 2rem;">Tell us what you need — software, a school system, training or hardware. We will respond with clear next steps.</p>
+        <div class="flex flex-wrap gap-2" style="justify-content:center;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Contact us</a>
+          <a href="faq.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3);color:inherit;">Read FAQ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer satisfaction floating messages -->
+    <section class="testimonials-float" aria-label="Customer satisfaction">
+      <div class="container">
+        <p class="section-eyebrow">What clients say</p>
+        <h2>Trusted by schools and teams</h2>
+      </div>
+      <div class="testimonials-track">
+        <div class="testimonial-row scroll-up">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“NE3XA Analytics made report cards and attendance tracking effortless. Our admin team saved hours every week.”</p>
+            <div class="author">Grace M. <span>· School administrator</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Clear communication, solid delivery. The school system fits how we actually work day to day.”</p>
+            <div class="author">James K. <span>· Head teacher</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Programming courses are practical and well structured. Students stay engaged and progress fast.”</p>
+            <div class="author">Amina S. <span>· Training coordinator</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“From fees to results — everything is in one place. Parents love the transparency.”</p>
+            <div class="author">Daniel O. <span>· Finance officer</span></div>
+          </div>
+          <!-- duplicate for seamless loop -->
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“NE3XA Analytics made report cards and attendance tracking effortless. Our admin team saved hours every week.”</p>
+            <div class="author">Grace M. <span>· School administrator</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Clear communication, solid delivery. The school system fits how we actually work day to day.”</p>
+            <div class="author">James K. <span>· Head teacher</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Programming courses are practical and well structured. Students stay engaged and progress fast.”</p>
+            <div class="author">Amina S. <span>· Training coordinator</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“From fees to results — everything is in one place. Parents love the transparency.”</p>
+            <div class="author">Daniel O. <span>· Finance officer</span></div>
+          </div>
+        </div>
+        <div class="testimonial-row scroll-down">
+          <div class="testimonial-card">
+            <div class="stars">★★★★☆</div>
+            <p>“We switched from spreadsheets to NE3XA and never looked back. Report printing is a one-click job.”</p>
+            <div class="author">Ruth N. <span>· Registrar</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Responsive team, realistic timelines. The custom software exactly matched our workflow.”</p>
+            <div class="author">Peter L. <span>· Operations lead</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Student records, fees and exams finally talk to each other. Analytics dashboard is a game changer.”</p>
+            <div class="author">Faith W. <span>· Principal</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Clean UI, reliable support. Highly recommend for any school ready to digitise properly.”</p>
+            <div class="author">Brian T. <span>· ICT officer</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★☆</div>
+            <p>“We switched from spreadsheets to NE3XA and never looked back. Report printing is a one-click job.”</p>
+            <div class="author">Ruth N. <span>· Registrar</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Responsive team, realistic timelines. The custom software exactly matched our workflow.”</p>
+            <div class="author">Peter L. <span>· Operations lead</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Student records, fees and exams finally talk to each other. Analytics dashboard is a game changer.”</p>
+            <div class="author">Faith W. <span>· Principal</span></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Clean UI, reliable support. Highly recommend for any school ready to digitise properly.”</p>
+            <div class="author">Brian T. <span>· ICT officer</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="NE3XA Home">
+        <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light" width="180" height="52">
+        <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark" width="180" height="52">
+      </a>
+          <p>Technology company focused on software, school systems and programming education.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="software-development.html">Software development</a>
+          <a href="web-development.html">Web development</a>
+          <a href="mobile-app-development.html">Mobile apps</a>
+          <a href="school-management.html">School management</a>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="programming-lessons.html">Programming courses</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Get in touch</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="values.html">Values</a>
+          <a href="process.html">Process</a>
+          <a href="careers.html">Careers</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 NE3XA. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/web-crawler.js"></script>
+  <script src="js/web-crawler-2.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Hero slider + rotating word + 3s timer
+    var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-bg-slider .hero-slide'));
+    var wordEl = document.getElementById('hero-rotating-word');
+    var progress = document.getElementById('hero-progress');
+    var timerEl = document.getElementById('hero-timer');
+    var dotsWrap = document.getElementById('hero-dots');
+    if (!slides.length || !wordEl || !dotsWrap) return;
+
+    var DURATION = 3500;
+    var index = 0;
+    var start = performance.now();
+    var paused = false;
+
+    // Build dots
+    dotsWrap.innerHTML = '';
+    slides.forEach(function (_, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'hero-dot' + (i === 0 ? ' active' : '');
+      b.setAttribute('aria-label', 'Slide ' + (i + 1));
+      b.addEventListener('click', function () { goTo(i); });
+      dotsWrap.appendChild(b);
+    });
+
+    function setWord(word) {
+      wordEl.classList.remove('is-active', 'is-enter');
+      wordEl.classList.add('is-exit');
+      setTimeout(function () {
+        wordEl.textContent = word;
+        wordEl.classList.remove('is-exit');
+        wordEl.classList.add('is-enter');
+        requestAnimationFrame(function () {
+          wordEl.classList.add('is-active');
+          wordEl.classList.remove('is-enter');
+        });
+      }, 220);
+    }
+
+    function goTo(i) {
+      if (i === index) {
+        start = performance.now();
+        return;
+      }
+      slides[index].classList.remove('active');
+      if (dotsWrap.children[index]) dotsWrap.children[index].classList.remove('active');
+      index = (i + slides.length) % slides.length;
+      slides[index].classList.add('active');
+      if (dotsWrap.children[index]) dotsWrap.children[index].classList.add('active');
+      setWord(slides[index].getAttribute('data-word') || 'work');
+      start = performance.now();
+      if (progress) progress.style.width = '0%';
+    }
+
+    function tick(now) {
+      if (!paused) {
+        var elapsed = now - start;
+        var t = Math.min(1, elapsed / DURATION);
+        if (progress) progress.style.width = (t * 100) + '%';
+        if (timerEl) timerEl.textContent = (Math.max(0, (DURATION - elapsed) / 1000)).toFixed(1) + 's';
+        if (elapsed >= DURATION) goTo(index + 1);
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+  </script>
+</body>
+</html>

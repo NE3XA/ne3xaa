@@ -1,0 +1,20 @@
+N3X4 — Python Professional Practice Paper
+Time guide: 50 minutes · 15 sample topics
+
+1. Decorators: timing, caching, auth checks
+2. Generators and memory-efficient pipelines
+3. asyncio vs threading vs multiprocessing
+4. Packaging (pyproject.toml) and publishing basics
+5. Type hints and gradual typing benefits
+6. Logging configuration for production
+7. Dependency injection patterns (simple)
+8. Database access patterns and connection pooling ideas
+9. Security: secrets, input validation
+10. Profiling and optimizing hot paths
+11. Designing clean APIs (functions/classes)
+12. Testing: fixtures, mocks, coverage goals
+13. CLI tools with argparse
+14. Environment configuration and 12-factor ideas
+15. Error budgets and graceful degradation in scripts/services
+
+Grade A: 80%+ · Grade B: 65–79%.

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NE3XA Blog article">
+  <title>Article — NE3XA</title>
+  <link rel="icon" type="image/jpeg" href="./images/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .post-hero {
+      position: relative;
+      min-height: 42vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0a0a0a;
+    }
+    .post-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+      transition: transform 8s ease;
+    }
+    .post-hero:hover .post-hero-img { transform: scale(1.04); }
+    .post-hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 3rem 0 2.5rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+    }
+    .post-hero-content .container { max-width: 760px; }
+    .post-hero h1 {
+      color: #fff;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      line-height: 1.2;
+      margin: 0.5rem 0 0.75rem;
+    }
+    .post-meta {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .post-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    .post-body h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 0.85rem;
+      font-size: 1.45rem;
+    }
+    .post-body p {
+      margin-bottom: 1.15rem;
+      line-height: 1.75;
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+    .post-body ul, .post-body ol {
+      margin: 0 0 1.25rem 1.25rem;
+      line-height: 1.7;
+    }
+    .post-body li { margin-bottom: 0.4rem; }
+    .post-figure {
+      margin: 2rem 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+    .post-figure img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    .post-figure figcaption {
+      padding: 0.65rem 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+    .post-cta {
+      margin-top: 3rem;
+      padding: 1.75rem;
+      border-radius: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .back-link:hover { color: #fff; }
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="NE3XA Home">
+        <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light" width="180" height="52">
+        <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark" width="180" height="52">
+      </a>
+      <nav class="nav-desktop" aria-label="Main">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services <svg class="chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5L6 7.5L9 4.5"/></svg></a>
+          <div class="dropdown">
+            <span class="dropdown-label">What we do</span>
+            <a href="software-development.html">Software Development</a>
+            <a href="web-development.html">Web Development</a>
+            <a href="mobile-app-development.html">Mobile Applications</a>
+            <a href="school-management.html">School Management Systems</a>
+            <a href="services.html">IT Consulting</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="programming-lessons.html" class="nav-link">Programming</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+        <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="join-team.html" class="btn-join-team">Join NE3XA</a>
+        <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" aria-label="Mobile">
+    <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+    <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+    <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+    <div class="nav-item"><a href="programming-lessons.html" class="nav-link">Programming</a></div>
+    <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+    <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+    <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+    <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+    <div class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></div>
+    <div class="nav-item"><a href="join-team.html" class="nav-link nav-ne3xa-mobile">Join NE3XA</a></div>
+  </nav>
+
+<main>
+  <div id="post-root">
+    <p style="padding:4rem 1.5rem;text-align:center;">Loading article…</p>
+  </div>
+</main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="NE3XA Home">
+        <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light" width="180" height="52">
+        <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark" width="180" height="52">
+      </a>
+          <p>Technology company focused on software, school systems and programming education.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="software-development.html">Software development</a>
+          <a href="web-development.html">Web development</a>
+          <a href="mobile-app-development.html">Mobile apps</a>
+          <a href="school-management.html">School management</a>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="programming-lessons.html">Programming courses</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Get in touch</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="values.html">Values</a>
+          <a href="process.html">Process</a>
+          <a href="careers.html">Careers</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 NE3XA. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+  <script src="js/main.js"></script>
+  <script>
+  (function () {
+    const articles = {
+      'school-workflows': {
+        title: 'Why school systems fail when they ignore daily workflows',
+        cat: 'School Management',
+        date: '12 Aug 2026',
+        img: 'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=80',
+        img2: 'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=80',
+        body: `
+          <p>Many school management systems look impressive in demos. Dashboards, attendance, fees, report cards — everything is on the feature list. Then term starts and teachers stop using half of it.</p>
+          <p>The usual reason is not “resistance to technology”. It is that the system added steps instead of removing them. A teacher who already marks a paper register is asked to open a portal, log in, navigate three screens, and re-enter the same data. When the network is slow or the phone battery is low, the paper wins.</p>
+          <h2>Design around the real day</h2>
+          <p>Useful systems start from the teacher’s actual routine: morning attendance in a crowded classroom, continuous assessment during the week, end-of-term report generation under time pressure. Every extra click competes with teaching time.</p>
+          <figure class="post-figure">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=80" alt="Classroom environment" loading="lazy">
+            <figcaption>Systems succeed when they fit the classroom, not the other way around.</figcaption>
+          </figure>
+          <p>In Uganda and across East Africa, offline-first or low-bandwidth modes, simple mobile interfaces, and clear role permissions make the difference between adoption and abandonment.</p>
+          <h2>What good looks like</h2>
+          <ul>
+            <li>Attendance that can be taken in under two minutes per class</li>
+            <li>Grades that flow automatically into report cards</li>
+            <li>Parent SMS or WhatsApp alerts without forcing parents onto a new app</li>
+            <li>Clear audit trails so administrators trust the data</li>
+          </ul>
+          <p>At NE3XA we build school systems with these constraints in mind — because a feature that is never used is not a feature.</p>
+        `
+      },
+      'first-language': {
+        title: 'Choosing a first programming language in 2026',
+        cat: 'Programming',
+        date: '5 Aug 2026',
+        img: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>Python and JavaScript remain the most common recommendations for beginners — and for good reasons. Both have gentle syntax, huge communities, and clear paths into real jobs.</p>
+          <h2>Python</h2>
+          <p>Excellent for data work, scripting, automation, AI foundations and backend services. Many university programmes in Uganda (including Computer Science and AI tracks) lean heavily on Python. It reads almost like English and has a vast standard library.</p>
+          <h2>JavaScript</h2>
+          <p>The language of the web. If you want to see results in a browser quickly, build interactive UIs, or work on full-stack products, JavaScript (and TypeScript later) is hard to beat. Frontend roles remain plentiful locally and remotely.</p>
+          <h2>How to decide</h2>
+          <ul>
+            <li>Want to build websites and apps people click? Start with JavaScript.</li>
+            <li>Interested in data, AI, automation or backend? Start with Python.</li>
+            <li>Unsure? Pick one, finish a small project, then learn the other. Switching later is normal.</li>
+          </ul>
+          <p>The language matters less than finishing projects and understanding fundamentals: variables, control flow, functions, data structures and debugging.</p>
+        `
+      },
+      'student-laptop': {
+        title: 'What makes a good student laptop in 2026',
+        cat: 'Computers',
+        date: '28 Jul 2026',
+        img: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>Marketing labels (“student”, “gaming”, “ultrabook”) are less useful than a short checklist of what actually affects daily work.</p>
+          <h2>Priority order</h2>
+          <ol>
+            <li><strong>RAM</strong> — 16 GB is the new comfortable minimum for coding, browser tabs and light VMs. 8 GB will struggle.</li>
+            <li><strong>Storage</strong> — SSD only. 512 GB is a good baseline; avoid eMMC and slow HDDs.</li>
+            <li><strong>Battery</strong> — Real 6–8 hour use without hunting for sockets between lectures.</li>
+            <li><strong>Screen & keyboard</strong> — Comfortable for long sessions; avoid very low-resolution or glossy glare-heavy panels if you can.</li>
+            <li><strong>Build & ports</strong> — USB-C charging is convenient; a full-size HDMI or USB-A can still save adapters.</li>
+          </ol>
+          <p>For Computer Science, Software Engineering and AI students, a machine that can run Docker, a local database and a modern IDE without constant swapping is worth the investment. NE3XA’s laptop recommendations focus on these practical thresholds rather than brand hype.</p>
+        `
+      },
+      'report-cards': {
+        title: 'Building report cards that parents actually understand',
+        cat: 'Education Technology',
+        date: '15 Jul 2026',
+        img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>End-of-term report cards are one of the most visible outputs of a school system. When they are confusing, parents call the school, teachers rewrite comments, and trust erodes.</p>
+          <h2>Clarity principles</h2>
+          <ul>
+            <li>Consistent grading scales across subjects and terms</li>
+            <li>Short, plain-language comments instead of jargon</li>
+            <li>Visual hierarchy: name, class, overall performance first; detail later</li>
+            <li>Print-friendly and mobile-friendly layouts</li>
+          </ul>
+          <p>Automated generation from continuous assessment data reduces last-minute errors and frees teachers to focus on the few comments that need a human touch.</p>
+        `
+      },
+      'api-habits': {
+        title: 'API design habits that save time later',
+        cat: 'Software Development',
+        date: '2 Jul 2026',
+        img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>APIs that feel obvious to the first developer often become expensive for the second. A few habits prevent that.</p>
+          <ul>
+            <li>Consistent naming (resource nouns, HTTP verbs)</li>
+            <li>Versioning from day one</li>
+            <li>Predictable error shapes and status codes</li>
+            <li>Pagination and filtering conventions documented early</li>
+            <li>Auth that is boring and standard (tokens, not custom inventiveness)</li>
+          </ul>
+          <p>Teams that treat the API as a product — with a short style guide and review checklist — spend less time arguing about shape and more time shipping features.</p>
+        `
+      },
+      'browser-tools': {
+        title: 'Five browser tools developers use every day',
+        cat: 'Technology Tips',
+        date: '20 Jun 2026',
+        img: 'https://images.unsplash.com/photo-1593720213428-28a5b9e94613?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>Whether you are debugging a school portal in Kampala or a SaaS product for a global client, these tools earn their place in the daily workflow.</p>
+          <ol>
+            <li><strong>Elements / Inspector</strong> — Layout, computed styles, accessibility tree</li>
+            <li><strong>Network panel</strong> — Status codes, payload size, timing, failed requests</li>
+            <li><strong>Console</strong> — Logs, errors, quick experiments</li>
+            <li><strong>Application / Storage</strong> — Cookies, localStorage, service workers</li>
+            <li><strong>Lighthouse / Performance</strong> — Quick audits before you optimise the wrong thing</li>
+          </ol>
+          <p>Mastering these reduces guesswork. Most “mysterious” frontend bugs become visible once you open the right panel.</p>
+        `
+      },
+      'uganda-tech-hubs': {
+        title: 'Uganda tech hubs and how students can plug in',
+        cat: 'East Africa & Uganda',
+        date: '10 Sep 2026',
+        img: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>Kampala’s innovation ecosystem has matured. Hubs and incubators are not only for startups — they are places to meet mentors, find internships and test ideas while you are still studying.</p>
+          <h2>Ways to engage</h2>
+          <ul>
+            <li>Attend open meetups and demo days (many are free or low-cost)</li>
+            <li>Apply for student or campus ambassador programmes</li>
+            <li>Bring a small project or portfolio — conversations go further when you show work</li>
+            <li>Look for university partnerships and industrial training slots</li>
+          </ul>
+          <p>Combining classroom theory with hub exposure is one of the fastest ways to become job-ready in Uganda’s tech market.</p>
+        `
+      },
+      'east-africa-fintech': {
+        title: 'Fintech in East Africa: what builders should know',
+        cat: 'East Africa & Uganda',
+        date: '28 Aug 2026',
+        img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>Mobile money is not a side feature in East Africa — it is infrastructure. Product design that ignores USSD, agent networks, offline scenarios and trust dynamics will struggle.</p>
+          <h2>Practical lessons</h2>
+          <ul>
+            <li>Design for intermittent connectivity</li>
+            <li>Respect existing user habits (menus, language, confirmation flows)</li>
+            <li>Security and fraud controls are product features, not afterthoughts</li>
+            <li>Regulation and partnership models vary by country — plan for that</li>
+          </ul>
+          <p>Builders who understand both the code and the cash-flow reality of the region build more durable products.</p>
+        `
+      },
+      'ai-africa': {
+        title: 'AI skills that matter for African developers',
+        cat: 'Global Tech',
+        date: '18 Aug 2026',
+        img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>You do not need a PhD or a GPU cluster to start contributing value with AI. Most organisations need people who can apply existing models, clean data, build pipelines and ship responsible features.</p>
+          <h2>High-leverage skills</h2>
+          <ul>
+            <li>Python + data libraries (pandas, basic ML workflows)</li>
+            <li>Prompting and evaluation for LLMs in real products</li>
+            <li>APIs and integration (putting models behind reliable services)</li>
+            <li>Ethics, bias awareness and data privacy</li>
+          </ul>
+          <p>Victoria University and other institutions in Uganda now offer dedicated AI and Data Science programmes. Pair formal study with small applied projects — chatbots for local use cases, simple classifiers, dashboards — and you will stand out.</p>
+        `
+      },
+      'remote-work-ea': {
+        title: 'Remote work from East Africa: tools, time zones and trust',
+        cat: 'East Africa & Uganda',
+        date: '5 Sep 2026',
+        img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>Engineers in Kampala, Nairobi and Dar es Salaam are shipping for companies across Europe and North America. The path is real — and competitive.</p>
+          <h2>What helps</h2>
+          <ul>
+            <li>Reliable internet and a quiet working setup</li>
+            <li>Clear written communication and async habits</li>
+            <li>A portfolio of shipped work (GitHub, live demos)</li>
+            <li>Comfort overlapping a few hours with client time zones</li>
+          </ul>
+          <p>Trust is built by delivery, not by location. Students who treat side projects like professional commitments often transition faster into paid remote roles.</p>
+        `
+      },
+      'cybersecurity-uganda': {
+        title: 'Cybersecurity careers in Uganda and the region',
+        cat: 'East Africa & Uganda',
+        date: '22 Jul 2026',
+        img: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>Banks, telecoms, government agencies and growing fintechs all need people who can defend systems and investigate incidents. Demand is rising faster than supply.</p>
+          <h2>Entry paths</h2>
+          <ul>
+            <li>Undergraduate programmes such as BSc Cyber Security and Digital Forensics (e.g. at Victoria University)</li>
+            <li>Hands-on labs: networking, Linux, basic ethical hacking practice in legal environments</li>
+            <li>Certifications later (Security+, relevant vendor or role-based certs) once foundations are solid</li>
+          </ul>
+          <p>Start with networking and systems administration fundamentals. Security builds on understanding how systems are supposed to work.</p>
+        `
+      },
+      'open-source-africa': {
+        title: 'Contributing to open source from Africa',
+        cat: 'Global Tech',
+        date: '1 Sep 2026',
+        img: 'https://images.unsplash.com/photo-1618477388954-7853f3e6b5b3?auto=format&fit=crop&w=1400&q=80',
+        body: `
+          <p>Open source is one of the most accessible ways to build a visible track record that employers anywhere can evaluate. Your location is secondary to the quality of your contributions.</p>
+          <h2>Getting started</h2>
+          <ul>
+            <li>Fix documentation or small bugs in tools you already use</li>
+            <li>Read contribution guidelines carefully</li>
+            <li>Keep pull requests focused and well described</li>
+            <li>Engage politely in issues and reviews</li>
+          </ul>
+          <p>Over time, consistent contributions become stronger evidence of skill than many coursework assignments. They also teach collaboration practices used in professional teams.</p>
+        `
+      }
+    };
+
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id') || 'school-workflows';
+    const post = articles[id] || articles['school-workflows'];
+
+    document.title = post.title + ' — NE3XA';
+    document.querySelector('meta[name="description"]').setAttribute('content', post.title);
+
+    const root = document.getElementById('post-root');
+    root.innerHTML = `
+      <section class="post-hero">
+        <img class="post-hero-img" src="${post.img}" alt="">
+        <div class="post-hero-content">
+          <div class="container">
+            <a href="blog.html" class="back-link">← Back to Blog</a>
+            <p class="post-meta">${post.date} · ${post.cat}</p>
+            <h1>${post.title}</h1>
+          </div>
+        </div>
+      </section>
+      <article class="post-body reveal-up">
+        ${post.body}
+        <div class="post-cta">
+          <p style="margin-bottom:1rem;">Explore more from NE3XA</p>
+          <a href="blog.html" class="btn btn-primary">All articles</a>
+          <a href="careers.html" class="btn btn-outline" style="margin-left:0.5rem;">IT Careers</a>
+        </div>
+      </article>
+    `;
+
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.reveal-up').forEach(el => el.classList.add('visible'));
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NE3XA — Technology company building software, school systems and programming education.">
+  <title>Programming Lessons — NE3XA</title>
+  <link rel="icon" type="image/jpeg" href="./images/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="NE3XA Home">
+        <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light" width="180" height="52">
+        <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark" width="180" height="52">
+      </a>
+      <nav class="nav-desktop" aria-label="Main">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services <svg class="chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5L6 7.5L9 4.5"/></svg></a>
+          <div class="dropdown">
+            <span class="dropdown-label">What we do</span>
+            <a href="software-development.html">Software Development</a>
+            <a href="web-development.html">Web Development</a>
+            <a href="mobile-app-development.html">Mobile Applications</a>
+            <a href="school-management.html">School Management Systems</a>
+            <a href="services.html">IT Consulting</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="programming-lessons.html" class="nav-link">Programming</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+        <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="join-team.html" class="btn-join-team">Join NE3XA</a>
+        <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" aria-label="Mobile">
+    <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+    <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+    <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+    <div class="nav-item"><a href="programming-lessons.html" class="nav-link">Programming</a></div>
+    <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+    <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+    <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+    <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+    <div class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></div>
+    <div class="nav-item"><a href="join-team.html" class="nav-link nav-ne3xa-mobile">Join NE3XA</a></div>
+  </nav>
+
+<main>
+    <section class="section" style="position:relative;overflow:hidden;padding-bottom:3rem;">
+      <div class="container" style="position:relative;">
+        <div class="img-ph img-ph-wide" style="margin-bottom:2rem;border-radius:12px;overflow:hidden;max-height:380px;">
+          <img src="https://s3.us-east-1.amazonaws.com/victoria-university-elearning/website%2Fnews_blog%2Fimages%2Fe114939f-1fd2-40c9-befb-cf6973d2b3be.jpg" alt="Victoria University students learning technology" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+        </div>
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Programming education</p>
+          <h1>Learn to write code that works</h1>
+          <p class="lead">Courses with beginner-friendly notes, curated YouTube lessons and clear reference guides so you can build skills step by step.</p>
+        </div>
+        <div class="filters-bar reveal">
+          <input type="search" id="course-search" class="search-input" placeholder="Search HTML, Python, Git…" aria-label="Search courses">
+          <div class="filter-group">
+            <label for="course-level">Level</label>
+            <select id="course-level">
+              <option value="">All levels</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+        </div>
+        <div class="course-grid" id="course-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Beginner resources</p>
+          <h2>Notes, videos and guides by language</h2>
+          <p class="lead">Curated starting points. Watch a video, skim the notes, then practice with the exercises provided.</p>
+        </div>
+        <div class="resource-grid reveal" id="resource-grid"></div>
+      </div>
+    </section>
+
+    <section class="section bg-off">
+      <div class="container">
+        <div class="two-col">
+          <div class="reveal">
+            <p class="section-eyebrow">If you are new</p>
+            <h2>A simple path for beginners</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);">
+              <li style="margin-bottom:0.75rem;"><strong style="color:var(--text);">HTML</strong> — structure of a page (headings, paragraphs, links)</li>
+              <li style="margin-bottom:0.75rem;"><strong style="color:var(--text);">CSS</strong> — colours, spacing, layout so it looks intentional</li>
+              <li style="margin-bottom:0.75rem;"><strong style="color:var(--text);">JavaScript</strong> — make buttons and forms respond</li>
+              <li style="margin-bottom:0.75rem;"><strong style="color:var(--text);">Git</strong> — save and share your work</li>
+              <li style="margin-bottom:0.75rem;"><strong style="color:var(--text);">Python or JS deeper</strong> — pick one for scripts or more advanced web work</li>
+            </ol>
+            <a href="contact.html" class="btn btn-primary mt-2">Ask about courses</a>
+            <a href="exams.html" class="btn btn-outline mt-2">Exams</a>
+            <a href="badges.html" class="btn btn-ghost mt-2">Badges</a>
+          </div>
+          <div class="reveal">
+            <div class="card" style="padding:1.75rem;">
+              <h3 style="margin-bottom:0.75rem;">What you need</h3>
+              <p class="text-sm">A browser (Chrome, Firefox or Edge). A free code editor is optional (VS Code is popular). No paid software required to start.</p>
+              <h3 style="margin:1.25rem 0 0.75rem;">How long?</h3>
+              <p class="text-sm mb-0">Most people can build a simple styled page in a few evenings. Consistency beats long marathon sessions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="NE3XA Home">
+        <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light" width="180" height="52">
+        <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark" width="180" height="52">
+      </a>
+          <p>Technology company focused on software, school systems and programming education.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="software-development.html">Software development</a>
+          <a href="web-development.html">Web development</a>
+          <a href="mobile-app-development.html">Mobile apps</a>
+          <a href="school-management.html">School management</a>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="programming-lessons.html">Programming courses</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Get in touch</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="values.html">Values</a>
+          <a href="process.html">Process</a>
+          <a href="careers.html">Careers</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 NE3XA. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <button class="back-to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/web-crawler.js"></script>
+  <script src="js/web-crawler-2.js"></script>
+  <script>
+    const courses = [
+      { id:1, name:'HTML & CSS Foundations', level:'beginner', desc:'Structure pages and style them with modern CSS. Layout, responsive design, accessibility.', duration:'~6 weeks', topics:'Semantics, Flexbox, Grid, Media queries' },
+      { id:2, name:'JavaScript Essentials', level:'intermediate', desc:'Variables, functions, DOM, events and async patterns. Build interactive pages.', duration:'~8 weeks', topics:'ES6+, DOM, Fetch, Modules' },
+      { id:3, name:'Python for Beginners', level:'beginner', desc:'Syntax, data structures, files and simple scripts. Base for automation or backends.', duration:'~8 weeks', topics:'Types, lists, functions, files' },
+      { id:4, name:'Python Intermediate', level:'intermediate', desc:'OOP, modules, virtual environments and common libraries.', duration:'~6 weeks', topics:'Classes, pip, packages' },
+      { id:5, name:'Java Fundamentals', level:'intermediate', desc:'Strong typing, classes and core APIs for desktop or backend work.', duration:'~10 weeks', topics:'OOP, collections, exceptions' },
+      { id:6, name:'C Programming', level:'intermediate', desc:'Memory, pointers and low-level control. Useful for systems thinking.', duration:'~8 weeks', topics:'Pointers, arrays, structs' },
+      { id:7, name:'C++ Essentials', level:'advanced', desc:'Modern C++ features for performance-critical applications.', duration:'~10 weeks', topics:'STL, RAII, templates' },
+      { id:8, name:'SQL & Databases', level:'beginner', desc:'Query design, joins, indexes and basic schema design.', duration:'~5 weeks', topics:'SELECT, JOIN, indexes' },
+      { id:9, name:'Git & GitHub', level:'beginner', desc:'Version control workflows used in real teams.', duration:'~3 weeks', topics:'Commits, branches, PRs' },
+      { id:10, name:'PHP for Web', level:'intermediate', desc:'Server-side scripting for dynamic sites and simple APIs.', duration:'~7 weeks', topics:'Forms, sessions, PDO' }
+    ];
+    function renderCourses() {
+      const q = (document.getElementById('course-search')?.value || '').toLowerCase();
+      const level = document.getElementById('course-level')?.value || '';
+      const list = courses.filter(c => {
+        if (level && c.level !== level) return false;
+        if (q && !(c.name + c.desc + c.topics).toLowerCase().includes(q)) return false;
+        return true;
+      });
+      document.getElementById('course-grid').innerHTML = list.length ? list.map(c => `
+        <article class="course-card">
+          <span class="course-level ${c.level}">${c.level}</span>
+          <h3>${c.name}</h3>
+          <p>${c.desc}</p>
+          <p class="text-sm" style="color:var(--text-muted);">${c.topics}</p>
+          <div class="course-meta"><span>${c.duration}</span><span>Self-paced</span></div>
+          <a href="#resources" class="btn btn-outline btn-sm">View resources</a>
+        </article>
+      `).join('') : '<p class="empty-state">No courses match. Try a different filter.</p>';
+    }
+    document.getElementById('course-search')?.addEventListener('input', renderCourses);
+    document.getElementById('course-level')?.addEventListener('change', renderCourses);
+    renderCourses();
+
+    const resources = [
+      { lang:'HTML', level:'Beginner', note:'HTML is the skeleton of every webpage. Learn tags, structure and accessibility basics before styling.', youtube:'https://www.youtube.com/watch?v=UB1O30fR-EE', docs:'https://developer.mozilla.org/en-US/docs/Learn/HTML', guide:'https://www.w3schools.com/html/html_intro.asp' },
+      { lang:'CSS', level:'Beginner', note:'CSS controls layout and appearance. Start with selectors, box model, Flexbox, then Grid.', youtube:'https://www.youtube.com/watch?v=1Rs2ND1ryYc', docs:'https://developer.mozilla.org/en-US/docs/Learn/CSS', guide:'https://web.dev/learn/css' },
+      { lang:'JavaScript', level:'Beginner to Intermediate', note:'Makes pages interactive. Learn variables, functions, the DOM, then events and fetch.', youtube:'https://www.youtube.com/watch?v=PkZNo7MFNFg', docs:'https://javascript.info/', guide:'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide' },
+      { lang:'Python', level:'Beginner', note:'Readable syntax. Great first language for scripts, data and later web backends.', youtube:'https://www.youtube.com/watch?v=_uQrJ0TkZlc', docs:'https://docs.python.org/3/tutorial/', guide:'https://docs.python.org/3/tutorial/index.html' },
+      { lang:'Java', level:'Intermediate', note:'Strongly typed and widely used in enterprise and Android. Start with classes and collections.', youtube:'https://www.youtube.com/watch?v=eIrMbAQSU34', docs:'https://dev.java/learn/', guide:'https://docs.oracle.com/javase/tutorial/' },
+      { lang:'C', level:'Intermediate', note:'Teaches how memory and the machine work. Useful foundation before systems or embedded work.', youtube:'https://www.youtube.com/watch?v=KJgsSFOSQv0', docs:'https://en.cppreference.com/w/c', guide:'https://www.learn-c.org/' },
+      { lang:'C++', level:'Advanced', note:'Builds on C with objects and the STL. Focus on modern C++ when you start.', youtube:'https://www.youtube.com/watch?v=vLnPwxZdW4Y', docs:'https://en.cppreference.com/w/', guide:'https://isocpp.org/get-started' },
+      { lang:'SQL', level:'Beginner', note:'Query and shape data. Learn SELECT, WHERE, JOIN and basic indexes first.', youtube:'https://www.youtube.com/watch?v=HXV3zeQKqGY', docs:'https://www.w3schools.com/sql/', guide:'https://mode.com/sql-tutorial/' },
+      { lang:'Git & GitHub', level:'Beginner', note:'Track changes and collaborate. Master commit, branch, merge and pull requests.', youtube:'https://www.youtube.com/watch?v=RGOj5yH7evk', docs:'https://git-scm.com/doc', guide:'https://guides.github.com/introduction/git-handbook/' },
+      { lang:'PHP', level:'Intermediate', note:'Server-side language still common for web apps. Learn forms, sessions and PDO.', youtube:'https://www.youtube.com/watch?v=OK_JCtrrv-c', docs:'https://www.php.net/manual/en/', guide:'https://www.w3schools.com/php/' }
+    ];
+    document.getElementById('resource-grid').innerHTML = resources.map(r => `
+      <article class="resource-card">
+        <div><span class="resource-badge">${r.level}</span><h3 style="margin-top:0.5rem;">${r.lang}</h3></div>
+        <p class="text-sm" style="margin:0;color:var(--text-secondary);">${r.note}</p>
+        <div class="resource-links">
+          <a href="${r.youtube}" target="_blank" rel="noopener noreferrer">YouTube lesson</a>
+          <a href="${r.docs}" target="_blank" rel="noopener noreferrer">Docs / notes</a>
+          <a href="${r.guide}" target="_blank" rel="noopener noreferrer">Guide</a>
+        </div>
+      </article>
+    `).join('');
+</script>
+</body>
+</html>

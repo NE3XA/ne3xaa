@@ -1,0 +1,5 @@
+N3X4 — Python Practice Paper (self-paced)
+Time guide: 40 minutes
+
+Cover: lists, indentation, len, comments, dicts, range, functions, file open modes, booleans, append.
+Grade A: 80%+ · Grade B: 65–79%.

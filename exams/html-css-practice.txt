@@ -1,0 +1,15 @@
+N3X4 — HTML & CSS Practice Paper (self-paced)
+Time guide: 30 minutes · 10 sample questions
+
+1. Which element is best for the main page heading?
+2. What does CSS stand for?
+3. Which property controls space inside an element?
+4. Flexbox main axis is controlled by which property?
+5. Why does semantic HTML matter?
+6. What are media queries mainly used for?
+7. Which unit scales with the root font size?
+8. What does display: grid create?
+9. Why is alt text on images important?
+10. Write a valid class selector for an element with class "card".
+
+Mark with your instructor or against course notes. Grade A: 80%+ · Grade B: 65–79%.

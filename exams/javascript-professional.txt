@@ -1,0 +1,20 @@
+N3X4 — JavaScript Professional Practice Paper
+Time guide: 50 minutes · 15 sample topics
+
+1. Event loop, microtasks, and macrotasks
+2. Designing fetch wrappers with timeouts and retries
+3. Module bundling concepts and tree-shaking
+4. Testing strategies (unit vs integration)
+5. Memory leaks in SPA-style UIs
+6. Web Workers use cases
+7. Security: XSS prevention in DOM updates
+8. Observability: structured logging in the browser
+9. Pattern: pub/sub or simple state stores
+10. TypeScript benefits in large codebases (conceptual)
+11. Performance profiling with DevTools
+12. Intersection Observer and virtualization ideas
+13. Service workers and offline strategies (overview)
+14. Immutable update patterns
+15. API error contracts and user-facing messages
+
+Grade A: 80%+ · Grade B: 65–79%.

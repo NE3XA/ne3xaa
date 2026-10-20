@@ -1,0 +1,17 @@
+N3X4 — SQL Intermediate Practice Paper
+Time guide: 35 minutes · 12 sample topics
+
+1. INNER vs LEFT vs RIGHT vs FULL JOIN
+2. Subqueries in SELECT, FROM, WHERE
+3. Indexes: when they help and when they hurt
+4. UNIQUE, CHECK, FOREIGN KEY constraints
+5. Transactions: BEGIN, COMMIT, ROLLBACK
+6. Aggregates with HAVING
+7. CASE expressions
+8. COALESCE and NULL handling
+9. Views: benefits and limits
+10. Normalization (1NF–3NF) overview
+11. EXISTS vs IN
+12. Basic EXPLAIN / query plan idea
+
+Grade A: 80%+ · Grade B: 65–79%.

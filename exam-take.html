@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NE3XA — Technology company building software, school systems and programming education.">
+  <title>Exam-Take — NE3XA</title>
+  <link rel="icon" type="image/jpeg" href="./images/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="NE3XA Home">
+        <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light" width="180" height="52">
+        <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark" width="180" height="52">
+      </a>
+      <nav class="nav-desktop" aria-label="Main">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services <svg class="chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5L6 7.5L9 4.5"/></svg></a>
+          <div class="dropdown">
+            <span class="dropdown-label">What we do</span>
+            <a href="software-development.html">Software Development</a>
+            <a href="web-development.html">Web Development</a>
+            <a href="mobile-app-development.html">Mobile Applications</a>
+            <a href="school-management.html">School Management Systems</a>
+            <a href="services.html">IT Consulting</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="programming-lessons.html" class="nav-link">Programming</a></div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+        <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="join-team.html" class="btn-join-team">Join NE3XA</a>
+        <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" aria-label="Mobile">
+    <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+    <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+    <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+    <div class="nav-item"><a href="programming-lessons.html" class="nav-link">Programming</a></div>
+    <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+    <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+    <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+    <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+    <div class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></div>
+    <div class="nav-item"><a href="join-team.html" class="nav-link nav-ne3xa-mobile">Join NE3XA</a></div>
+  </nav>
+
+<main>
+    <section class="section">
+      <div class="container" style="max-width:800px;">
+        <div id="exam-intro">
+          <h1 id="exam-title">Exam</h1>
+          <p class="lead" id="exam-desc"></p>
+          <div class="exam-meta">
+            <span id="exam-count"></span>
+            <span id="exam-duration"></span>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg" id="exam-start">Start timed exam</button>
+          <a href="exams.html" class="btn btn-ghost">Back to exams</a>
+        </div>
+
+        <div id="exam-live" style="display:none;">
+          <div class="flex justify-between items-center mb-3" style="flex-wrap:wrap;gap:1rem;">
+            <h2 id="exam-live-title" style="margin:0;font-size:1.25rem;"></h2>
+            <div class="exam-timer-box">Time left: <span id="exam-clock">00:00</span></div>
+          </div>
+          <form id="exam-form"></form>
+          <button type="button" class="btn btn-primary btn-lg mt-3" id="exam-submit">Submit exam</button>
+        </div>
+
+        <div id="exam-result" style="display:none;text-align:center;padding:2rem 0;">
+          <h2 id="result-title"></h2>
+          <p id="result-score" style="font-size:1.5rem;font-weight:600;color:var(--accent);margin:1rem 0;"></p>
+          <p id="result-msg"></p>
+          <div class="flex gap-2" style="justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
+            <a href="badges.html" class="btn btn-primary">View badges</a>
+            <a href="exams.html" class="btn btn-outline">More exams</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script>
+  (function () {
+    var bank = {
+      'html-css': {
+        title: 'HTML & CSS — Beginner',
+        desc: 'Timed assessment covering structure, semantics and modern layout.',
+        minutes: 30,
+        questions: [
+          { q: 'Which element is best for the main page heading?', opts: ['<h1>', '<header>', '<title>', '<strong>'], a: 0 },
+          { q: 'What does CSS stand for?', opts: ['Computer Style Sheets', 'Cascading Style Sheets', 'Creative Style System', 'Colorful Style Syntax'], a: 1 },
+          { q: 'Which property controls space inside an element?', opts: ['margin', 'padding', 'border', 'gap'], a: 1 },
+          { q: 'Flexbox main axis is controlled by:', opts: ['align-items', 'justify-content', 'flex-wrap', 'order'], a: 1 },
+          { q: 'Semantic HTML helps with:', opts: ['Only colours', 'Accessibility and meaning', 'Faster CSS only', 'JavaScript speed'], a: 1 },
+          { q: 'Media queries are mainly used for:', opts: ['Animations', 'Responsive design', 'Fonts only', 'SEO titles'], a: 1 },
+          { q: 'Which unit scales with root font size?', opts: ['px', 'em', 'rem', 'pt'], a: 2 },
+          { q: 'display: grid creates:', opts: ['A float layout', 'A two-dimensional layout system', 'Only columns', 'Inline text'], a: 1 },
+          { q: 'alt text on images is important for:', opts: ['SEO only', 'Accessibility and when images fail', 'CSS selectors', 'Page speed only'], a: 1 },
+          { q: 'Which is a valid class selector?', opts: ['#box', '.box', 'box', '*box'], a: 1 }
+        ]
+      },
+      'javascript': {
+        title: 'JavaScript — Beginner',
+        desc: 'Core language, DOM and practical browser scripting.',
+        minutes: 40,
+        questions: [
+          { q: 'Which keyword declares a block-scoped variable?', opts: ['var', 'let', 'function', 'define'], a: 1 },
+          { q: '=== compares:', opts: ['Value only', 'Value and type', 'References only', 'Strings only'], a: 1 },
+          { q: 'document.querySelector returns:', opts: ['All matches', 'First match or null', 'An array always', 'A NodeList only'], a: 1 },
+          { q: 'addEventListener is used to:', opts: ['Style elements', 'Attach event handlers', 'Create variables', 'Import modules'], a: 1 },
+          { q: 'Array method that creates a new array:', opts: ['push', 'map', 'pop', 'splice'], a: 1 },
+          { q: 'JSON.stringify converts objects to:', opts: ['XML', 'A string', 'A Map', 'Binary'], a: 1 },
+          { q: 'typeof null returns:', opts: ['"null"', '"object"', '"undefined"', '"number"'], a: 1 },
+          { q: 'Promises help with:', opts: ['CSS animations', 'Async operations', 'HTML parsing', 'Font loading only'], a: 1 },
+          { q: 'const means the binding:', opts: ['Can be reassigned', 'Cannot be reassigned', 'Is always a number', 'Is global'], a: 1 },
+          { q: 'Which is a falsy value?', opts: ['"0"', '[]', '0', '{}'], a: 2 }
+        ]
+      },
+      'python': {
+        title: 'Python — Beginner',
+        desc: 'Syntax, structures and practical scripting fundamentals.',
+        minutes: 40,
+        questions: [
+          { q: 'Which creates a list?', opts: ['(1,2)', '[1,2]', '{1,2}', 'list'], a: 1 },
+          { q: 'Indentation in Python:', opts: ['Is optional', 'Defines blocks', 'Only for loops', 'Is for style only'], a: 1 },
+          { q: 'len("NE3XA") returns:', opts: ['3', '4', '5', 'Error'], a: 2 },
+          { q: 'How do you start a comment?', opts: ['//', '#', '/*', '--'], a: 1 },
+          { q: 'dict stores:', opts: ['Only numbers', 'Key-value pairs', 'Only strings', 'Ordered only in old Python'], a: 1 },
+          { q: 'for x in range(3) iterates:', opts: ['1,2,3', '0,1,2', '0,1,2,3', '3 times starting at 3'], a: 1 },
+          { q: 'def is used to:', opts: ['Define a function', 'Delete a variable', 'Declare a class only', 'Import a module'], a: 0 },
+          { q: 'Which opens a file for reading?', opts: ["open('f','w')", "open('f','r')", "open('f','a')", "read('f')"], a: 1 },
+          { q: 'True and False are:', opts: ['Strings', 'Booleans', 'Integers only', 'NoneType'], a: 1 },
+          { q: 'list.append(x) will:', opts: ['Return a new list', 'Add x to the end', 'Sort the list', 'Remove x'], a: 1 }
+        ]
+      },
+      'sql': {
+        title: 'SQL — Beginner',
+        desc: 'Querying and relating data with SQL.',
+        minutes: 30,
+        questions: [
+          { q: 'SELECT is used to:', opts: ['Delete rows', 'Retrieve data', 'Create users', 'Backup databases'], a: 1 },
+          { q: 'WHERE filters:', opts: ['Columns', 'Rows', 'Databases', 'Indexes only'], a: 1 },
+          { q: 'JOIN combines:', opts: ['Two queries only', 'Rows from related tables', 'CSS files', 'Python lists'], a: 1 },
+          { q: 'PRIMARY KEY uniquely identifies:', opts: ['A column name', 'Each row', 'A database', 'A view'], a: 1 },
+          { q: 'ORDER BY sorts:', opts: ['Tables', 'Result rows', 'Schemas', 'Users'], a: 1 },
+          { q: 'COUNT(*) returns:', opts: ['Sum of values', 'Number of rows', 'Average', 'Max value'], a: 1 },
+          { q: 'NULL means:', opts: ['Zero', 'Unknown / missing', 'Empty string', 'False'], a: 1 },
+          { q: 'GROUP BY is often used with:', opts: ['Aggregate functions', 'CSS', 'HTML forms', 'Git'], a: 0 },
+          { q: 'INSERT INTO adds:', opts: ['Columns only', 'New rows', 'Indexes only', 'Users'], a: 1 },
+          { q: 'Which is a common text type?', opts: ['INT', 'VARCHAR', 'BOOLEAN only', 'FLOAT'], a: 1 }
+        ]
+      },
+      'html-css-intermediate': {
+        title: 'HTML & CSS — Intermediate',
+        desc: 'Grid, specificity, forms, and modern layout patterns.',
+        minutes: 35,
+        questions: [
+          { q: 'CSS Grid is best described as:', opts: ['One-dimensional only', 'Two-dimensional layout system', 'A JavaScript API', 'A font format'], a: 1 },
+          { q: 'Which has higher specificity?', opts: ['.card', '#main', 'div', '*'], a: 1 },
+          { q: 'CSS custom properties start with:', opts: ['$', '--', 'var-', '@'], a: 1 },
+          { q: 'position: sticky elements stick relative to:', opts: ['The viewport only always', 'Their nearest scroll ancestor', 'The body only', 'Fixed parents only'], a: 1 },
+          { q: 'The required attribute on an input:', opts: ['Styles the border', 'Marks the field as mandatory for form validation', 'Disables the field', 'Hides the label'], a: 1 },
+          { q: 'object-fit: cover does what?', opts: ['Crops to fill the box while preserving aspect ratio', 'Stretches without cropping', 'Adds padding', 'Removes the image'], a: 0 },
+          { q: 'A fieldset is used to:', opts: ['Group related form controls', 'Create CSS grids', 'Load fonts', 'Define routes'], a: 0 },
+          { q: 'Media queries primarily respond to:', opts: ['Server load', 'Viewport/device characteristics', 'Database size', 'Git branches'], a: 1 },
+          { q: 'rem units are relative to:', opts: ['Parent element', 'Root element font size', 'Viewport width only', 'Device pixels fixed'], a: 1 },
+          { q: 'aspect-ratio helps prevent:', opts: ['Colour contrast issues', 'Layout shift when media loads', 'SQL injection', 'CORS errors'], a: 1 },
+          { q: 'display: contents makes an element:', opts: ['Invisible and removed from accessibility tree always', 'Generate no box; children appear as if parent gone', 'A flex container only', 'Fixed to the viewport'], a: 1 },
+          { q: 'Logical properties like margin-inline-start help with:', opts: ['Faster JavaScript', 'Internationalization and writing modes', 'Database joins', 'CPU caching'], a: 1 }
+        ]
+      },
+      'javascript-intermediate': {
+        title: 'JavaScript — Intermediate',
+        desc: 'Closures, promises, modules, and practical patterns.',
+        minutes: 45,
+        questions: [
+          { q: 'A closure allows a function to:', opts: ['Run only once', 'Access variables from its outer scope after that scope finished', 'Bypass the event loop', 'Compile to WebAssembly'], a: 1 },
+          { q: 'Promise.all rejects when:', opts: ['Any promise rejects', 'All promises resolve', 'None resolve in 1s', 'The array is empty only'], a: 0 },
+          { q: 'Array.prototype.map returns:', opts: ['The same array mutated', 'A new array with transformed items', 'A single value', 'A boolean'], a: 1 },
+          { q: 'Optional chaining (?.) stops evaluation when:', opts: ['A value is 0', 'A value is null or undefined', 'A value is false', 'A value is empty string'], a: 1 },
+          { q: 'import/export are part of:', opts: ['CommonJS only', 'ES modules', 'CSS modules only', 'HTML imports'], a: 1 },
+          { q: 'event.target vs event.currentTarget:', opts: ['They are always the same', 'target is the originating element; currentTarget is the listener element', 'currentTarget is always document', 'target is only for capture phase'], a: 1 },
+          { q: 'JSON.stringify on undefined as a top-level value returns:', opts: ['"undefined"', 'undefined (not a string)', 'null', '{}'], a: 1 },
+          { q: 'Debouncing a function means:', opts: ['Running it on every event immediately', 'Delaying execution until events stop for a period', 'Running it in a Worker only', 'Removing it from memory'], a: 1 },
+          { q: 'localStorage data:', opts: ['Expires when the tab closes', 'Persists until cleared', 'Is shared across all browsers automatically', 'Cannot store strings'], a: 1 },
+          { q: 'The nullish coalescing operator (??) falls through on:', opts: ['0 and ""', 'null and undefined only', 'false only', 'NaN only'], a: 1 },
+          { q: 'try/catch can catch:', opts: ['Only network errors', 'Thrown errors in the try block (sync, and awaited promises if awaited inside)', 'CSS parse errors', 'HTML validation errors'], a: 1 },
+          { q: 'Array.reduce is commonly used to:', opts: ['Sort in place only', 'Accumulate a single result from many items', 'Clone the DOM', 'Register service workers'], a: 1 }
+        ]
+      },
+      'python-intermediate': {
+        title: 'Python — Intermediate',
+        desc: 'Comprehensions, OOP basics, exceptions, and modules.',
+        minutes: 45,
+        questions: [
+          { q: 'A list comprehension is best for:', opts: ['Infinite loops', 'Building a new list from an iterable with optional filtering', 'GUI layouts', 'SQL joins'], a: 1 },
+          { q: '__init__ is used to:', opts: ['Delete an object', 'Initialize a new instance', 'Import modules', 'Start the interpreter'], a: 1 },
+          { q: 'Raising an exception is done with:', opts: ['throw', 'raise', 'error()', 'panic'], a: 1 },
+          { q: 'with open(...) as f: ensures:', opts: ['The file stays open forever', 'Proper resource cleanup (close) via context manager', 'Faster CPU', 'Network caching'], a: 1 },
+          { q: '*args in a function signature collects:', opts: ['Keyword-only args into a dict', 'Extra positional args into a tuple', 'Only strings', 'Global variables'], a: 1 },
+          { q: 'pathlib.Path is preferred over os.path because:', opts: ['It is object-oriented and more readable for path operations', 'It runs only on Windows', 'It replaces the need for files', 'It is a database driver'], a: 0 },
+          { q: 'A virtual environment is used to:', opts: ['Speed up the CPU', 'Isolate project dependencies', 'Compile C extensions only', 'Host websites'], a: 1 },
+          { q: 'dict.get(key, default) returns default when:', opts: ['Key exists', 'Key is missing', 'Value is 0', 'Dict is frozen'], a: 1 },
+          { q: 'sorted(list, key=fn) sorts by:', opts: ['Memory address only', 'The value returned by fn for each item', 'Random order', 'Reverse length always'], a: 1 },
+          { q: 'Importing a package runs:', opts: ['Nothing ever', 'Its __init__.py (if present) when first imported', 'All tests automatically', 'A web server'], a: 1 },
+          { q: 'isinstance(x, list) checks:', opts: ['Variable name', 'Whether x is an instance of list (or subclass)', 'If x is callable', 'File existence'], a: 1 },
+          { q: 'A finally block runs:', opts: ['Only on success', 'Only on error', 'Whether an exception occurred or not (after try/except)', 'Only in async code'], a: 2 }
+        ]
+      },
+      'sql-intermediate': {
+        title: 'SQL — Intermediate',
+        desc: 'Joins, subqueries, indexes, constraints, and transactions.',
+        minutes: 35,
+        questions: [
+          { q: 'LEFT JOIN returns:', opts: ['Only matching rows from both tables', 'All rows from the left table and matches from the right', 'A Cartesian product only', 'Deleted rows'], a: 1 },
+          { q: 'A subquery in WHERE is often used to:', opts: ['Style results', 'Filter rows based on another query result', 'Create indexes automatically', 'Backup tables'], a: 1 },
+          { q: 'An index typically speeds up:', opts: ['INSERT always', 'Lookups and filtered reads on indexed columns', 'Network latency', 'CSS rendering'], a: 1 },
+          { q: 'FOREIGN KEY enforces:', opts: ['Unique emails only', 'Referential integrity between tables', 'Column colours', 'File permissions'], a: 1 },
+          { q: 'COMMIT ends a transaction by:', opts: ['Undoing all changes', 'Permanently saving the transaction changes', 'Dropping the table', 'Closing the app'], a: 1 },
+          { q: 'HAVING filters:', opts: ['Rows before grouping', 'Groups after aggregation', 'Column names', 'Users'], a: 1 },
+          { q: 'COALESCE(a, b) returns:', opts: ['Always a', 'The first non-NULL among its arguments', 'Always NULL', 'A sum'], a: 1 },
+          { q: 'A VIEW is:', opts: ['A physical copy of data always', 'A stored query that presents data as a table', 'A backup file', 'A user role'], a: 1 },
+          { q: 'EXISTS returns true when:', opts: ['The subquery returns at least one row', 'The table is empty', 'The index is missing', 'The transaction is open'], a: 0 },
+          { q: 'Third normal form (3NF) aims to reduce:', opts: ['Network hops', 'Redundant data dependencies', 'CSS specificity', 'Python imports'], a: 1 },
+          { q: 'A transaction should be atomic meaning:', opts: ['It runs on one CPU core', 'All-or-nothing changes', 'It uses only SELECT', 'It never locks'], a: 1 },
+          { q: 'CHECK constraints:', opts: ['Validate column values against a condition', 'Compress data', 'Create users', 'Style reports'], a: 0 }
+        ]
+      },
+      'html-css-professional': {
+        title: 'HTML & CSS — Professional',
+        desc: 'Architecture, performance, accessibility, and design systems.',
+        minutes: 45,
+        questions: [
+          { q: 'Design tokens in CSS are often implemented as:', opts: ['SQL tables', 'Custom properties shared across components', 'Binary fonts', 'HTTP headers only'], a: 1 },
+          { q: 'Critical CSS refers to:', opts: ['All CSS minified only', 'CSS needed for above-the-fold first paint', 'CSS in Web Workers', 'Print-only CSS'], a: 1 },
+          { q: ':has() selector allows:', opts: ['Parent selection based on descendants', 'Only selecting IDs', 'Running JavaScript', 'Querying databases'], a: 0 },
+          { q: 'A practical a11y check includes:', opts: ['Colour alone for meaning, no labels', 'Keyboard access, labels, contrast, focus visibility', 'Removing all alt text', 'Disabling zoom'], a: 1 },
+          { q: 'font-display: swap primarily helps with:', opts: ['SQL speed', 'Avoiding invisible text during font load', 'Image compression', 'CORS'], a: 1 },
+          { q: 'content-visibility: auto can improve:', opts: ['Rendering performance for off-screen content', 'Password strength', 'DNS lookup', 'TLS version'], a: 0 },
+          { q: 'Logical properties (margin-inline) support:', opts: ['Only LTR languages', 'Different writing modes and directions', 'Only print', 'Only Grid'], a: 1 },
+          { q: 'Subgrid allows:', opts: ['Children to participate in a parent grid alignment', 'Faster JavaScript loops', 'Database sharding', 'GPU overclocking'], a: 0 },
+          { q: 'A design system CSS approach should prioritize:', opts: ['One-off magic numbers everywhere', 'Consistent tokens, documentation, and reusable patterns', 'Inline styles only', 'Avoiding variables'], a: 1 },
+          { q: 'CLS (Cumulative Layout Shift) is reduced by:', opts: ['Omitting width/height on images', 'Reserving space for media and dynamic content', 'Using only absolute positioning', 'Disabling CSS'], a: 1 },
+          { q: 'prefers-color-scheme is used to:', opts: ['Detect OS light/dark preference', 'Set SQL collation', 'Pick a CDN region', 'Measure FPS'], a: 0 },
+          { q: 'Skip links improve:', opts: ['SEO keyword density only', 'Keyboard navigation to main content', 'Image sharpness', 'Server uptime'], a: 1 },
+          { q: 'Cascade layers (@layer) help:', opts: ['Control cascade priority in a structured way', 'Encrypt CSS', 'Compile TypeScript', 'Run unit tests'], a: 0 },
+          { q: 'When auditing CSS performance, check:', opts: ['Unused rules, expensive selectors, large animations', 'Only file name length', 'Git blame only', 'Python version'], a: 0 },
+          { q: 'Component documentation should include:', opts: ['Only screenshots with no states', 'Variants, accessibility notes, and token usage', 'Database ERDs only', 'Server rack diagrams'], a: 1 }
+        ]
+      },
+      'javascript-professional': {
+        title: 'JavaScript — Professional',
+        desc: 'Async architecture, performance, security, and testing mindset.',
+        minutes: 50,
+        questions: [
+          { q: 'Microtasks (e.g. resolved promises) run:', opts: ['After the next macrotask only next day', 'Before the next rendering/macrotask checkpoint after the current call stack', 'Only in Web Workers', 'Never in browsers'], a: 1 },
+          { q: 'A robust fetch wrapper should handle:', opts: ['Only happy paths', 'Timeouts, aborts, non-OK statuses, and JSON errors', 'Only GET', 'Only local files'], a: 1 },
+          { q: 'Tree-shaking relies on:', opts: ['Side-effect-free ES modules and static structure', 'Global variables', 'eval everywhere', 'Inline scripts only'], a: 0 },
+          { q: 'XSS via innerHTML is mitigated by:', opts: ['Using textContent or sanitization for untrusted data', 'More CSS', 'Larger bundles', 'Disabling HTTPS'], a: 0 },
+          { q: 'A memory leak in SPAs often comes from:', opts: ['Too many comments', 'Listeners or references not cleaned on unmount', 'Using const', 'Short variable names'], a: 1 },
+          { q: 'Web Workers are useful for:', opts: ['DOM manipulation directly', 'CPU-heavy work off the main thread', 'CSS animations only', 'SQL joins in the browser engine'], a: 1 },
+          { q: 'Structured logging in the client helps:', opts: ['Only prettier consoles', 'Debugging production issues with consistent fields', 'Faster CSS', 'DNS'], a: 1 },
+          { q: 'Intersection Observer is often used for:', opts: ['Password hashing', 'Lazy-loading and infinite scroll efficiency', 'TLS handshake', 'Cookie encryption'], a: 1 },
+          { q: 'Immutable update patterns help:', opts: ['Predictable state changes and simpler debugging', 'Slower CPUs always', 'Bypassing CORS', 'Writing SQL'], a: 0 },
+          { q: 'Service workers enable:', opts: ['Offline caching strategies and background features', 'Direct database admin', 'Root access on devices', 'Faster Python'], a: 0 },
+          { q: 'Feature detecting APIs is preferred over:', opts: ['UA string sniffing alone', 'Using the APIs', 'Reading docs', 'Writing tests'], a: 0 },
+          { q: 'AbortController is used to:', opts: ['Cancel fetch/async work', 'Abort CSS transitions only', 'Stop the GC', 'Close SQL connections in the browser'], a: 0 },
+          { q: 'Unit tests should focus on:', opts: ['Implementation details only', 'Behaviour and contracts of units', 'Only UI colours', 'Only network latency'], a: 1 },
+          { q: 'Code splitting improves:', opts: ['Initial load by loading less up front', 'SQL index size', 'Font hinting', 'Battery chemistry'], a: 0 },
+          { q: 'A clear API error contract means:', opts: ['Random HTML error pages only', 'Consistent status codes and error shapes for clients', 'No errors ever', 'Only stack traces in UI'], a: 1 }
+        ]
+      },
+      'python-professional': {
+        title: 'Python — Professional',
+        desc: 'Decorators, concurrency, packaging, and production practices.',
+        minutes: 50,
+        questions: [
+          { q: 'A decorator is typically used to:', opts: ['Wrap functions/classes to add behaviour', 'Format hard drives', 'Compile C only', 'Replace the GIL permanently'], a: 0 },
+          { q: 'Generators help with:', opts: ['Lazy iteration and lower memory for large streams', 'Faster GUI only', 'Mandatory multithreading', 'SQL parsing in the kernel'], a: 0 },
+          { q: 'asyncio is best when workloads are:', opts: ['Pure CPU-bound tight loops only', 'I/O-bound concurrent tasks', 'Only single-threaded file reads that never wait', 'GPU shader compiles'], a: 1 },
+          { q: 'pyproject.toml is commonly used for:', opts: ['Project metadata and build/dependency config', 'Storing passwords in plain text', 'CSS themes', 'Nginx config only'], a: 0 },
+          { q: 'Type hints primarily help:', opts: ['Runtime speed always', 'Readability, tooling, and earlier error detection', 'Replacing unit tests entirely', 'Database migrations'], a: 1 },
+          { q: 'Production logging should:', opts: ['Print only to stdout with no levels', 'Use levels, context, and avoid secrets', 'Log passwords for debugging', 'Disable all logs'], a: 1 },
+          { q: 'Connection pooling exists to:', opts: ['Reuse DB connections efficiently under load', 'Pool CSS files', 'Cache DNS only', 'Share GIL locks'], a: 0 },
+          { q: 'Secrets in apps should be:', opts: ['Hard-coded in source', 'Loaded from environment/secret stores', 'Committed to git', 'Emailed weekly'], a: 1 },
+          { q: 'cProfile is used for:', opts: ['Finding hot spots in Python code', 'Profiling CSS layout', 'Encrypting traffic', 'Designing ERDs'], a: 0 },
+          { q: 'Graceful degradation means:', opts: ['Crashing hard on any error', 'Continuing with reduced functionality when dependencies fail', 'Ignoring all exceptions silently forever', 'Disabling tests'], a: 1 },
+          { q: 'pytest fixtures help with:', opts: ['Reusable test setup/teardown', 'Faster CSS', 'SQL replication', 'Font loading'], a: 0 },
+          { q: 'argparse is used to:', opts: ['Build CLIs and parse arguments', 'Parse HTML', 'Style markdown', 'Manage Kubernetes'], a: 0 },
+          { q: '12-factor style config prefers:', opts: ['Config in environment', 'Config only in code constants', 'Config in random files on desktop', 'Config in client CSS'], a: 0 },
+          { q: 'A generator expression (x for x in xs) is:', opts: ['Eager like a list comprehension', 'Lazy like a generator', 'A SQL cursor', 'A thread pool'], a: 1 },
+          { q: 'Packaging a library should include:', opts: ['Clear versioning and declared dependencies', 'Only a single .py with no metadata', 'Embedded secrets', 'Compiled CSS only'], a: 0 }
+        ]
+      },
+      'sql-professional': {
+        title: 'SQL — Professional',
+        desc: 'Optimization, CTEs, isolation, and analytical SQL.',
+        minutes: 45,
+        questions: [
+          { q: 'A CTE (WITH clause) improves:', opts: ['Readability of multi-step queries', 'Network speed to the client', 'CSS specificity', 'Python imports'], a: 0 },
+          { q: 'ROW_NUMBER() OVER (PARTITION BY ... ORDER BY ...) assigns:', opts: ['Random UUIDs', 'Unique ranks within partitions', 'Primary keys automatically', 'File permissions'], a: 1 },
+          { q: 'READ COMMITTED isolation primarily prevents:', opts: ['Dirty reads', 'All phantoms always', 'Disk failure', 'DNS spoofing'], a: 0 },
+          { q: 'A sargable predicate allows:', opts: ['Indexes to be used effectively', 'Only full table scans', 'Faster CSS', 'Skipping authentication'], a: 0 },
+          { q: 'Table partitioning is used to:', opts: ['Split large tables for manageability and performance', 'Partition CSS files', 'Split git repos', 'Encrypt columns only'], a: 0 },
+          { q: 'Materialized views store:', opts: ['Query results physically for faster reads', 'Only query text', 'CSS tokens', 'Python bytecode'], a: 0 },
+          { q: 'Schema migrations should be:', opts: ['Ad-hoc and undocumented', 'Versioned, reviewable, and reversible when possible', 'Done only in production without tests', 'Avoided forever'], a: 1 },
+          { q: 'Soft delete typically means:', opts: ['Physically removing rows', 'Marking rows inactive while retaining them', 'Deleting the database', 'Dropping indexes'], a: 1 },
+          { q: 'Window functions differ from GROUP BY because they:', opts: ['Always delete rows', 'Can return row-level detail while computing aggregates', 'Only work on integers', 'Replace PRIMARY KEYs'], a: 1 },
+          { q: 'Least privilege for DB users means:', opts: ['Grant only needed permissions', 'Grant admin to everyone', 'Disable all logins', 'Share one superuser password'], a: 0 },
+          { q: 'EXPLAIN (or equivalent) helps you:', opts: ['See the query execution plan', 'Explain CSS to designers', 'Generate Python stubs', 'Measure battery usage'], a: 0 },
+          { q: 'JSON columns are useful when:', opts: ['Schema is highly variable or semi-structured', 'You need strict relational integrity always only', 'Replacing all tables always', 'Storing only integers'], a: 0 },
+          { q: 'Avoiding N+1 from SQL often involves:', opts: ['Joins or batch reads instead of per-row queries', 'More round-trips', 'Disabling indexes', 'Using SELECT * only'], a: 0 },
+          { q: 'Analytical cohort queries often rely on:', opts: ['Date bucketing and conditional aggregation', 'Only DELETE statements', 'CSS grid', 'FTP'], a: 0 },
+          { q: 'Documenting SQL for teams should include:', opts: ['Purpose, grain, and important filters/joins', 'Only the author nickname', 'No comments ever', 'Binary query plans only'], a: 0 }
+        ]
+      }
+    };
+
+    var params = new URLSearchParams(location.search);
+    var id = params.get('id') || 'html-css';
+    var exam = bank[id] || bank['html-css'];
+    var timerId = null;
+    var remaining = 0;
+
+    document.getElementById('exam-title').textContent = exam.title;
+    document.getElementById('exam-desc').textContent = exam.desc;
+    document.getElementById('exam-count').textContent = exam.questions.length + ' questions';
+    document.getElementById('exam-duration').textContent = exam.minutes + ' minutes';
+    document.title = exam.title + ' — NE3XA';
+
+    document.getElementById('exam-start').addEventListener('click', function () {
+      document.getElementById('exam-intro').style.display = 'none';
+      document.getElementById('exam-live').style.display = 'block';
+      document.getElementById('exam-live-title').textContent = exam.title;
+      var form = document.getElementById('exam-form');
+      function esc(s) {
+        return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      }
+      form.innerHTML = exam.questions.map(function (item, i) {
+        var opts = item.opts.map(function (o, j) {
+          return '<label><input type="radio" name="q' + i + '" value="' + j + '"> ' + esc(o) + '</label>';
+        }).join('');
+        return '<div class="exam-question"><h4>' + (i + 1) + '. ' + esc(item.q) + '</h4><div class="exam-options">' + opts + '</div></div>';
+      }).join('');
+      remaining = exam.minutes * 60;
+      updateClock();
+      timerId = setInterval(function () {
+        remaining -= 1;
+        updateClock();
+        if (remaining <= 0) {
+          clearInterval(timerId);
+          finish();
+        }
+      }, 1000);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    function updateClock() {
+      var m = Math.floor(Math.max(0, remaining) / 60);
+      var s = Math.max(0, remaining) % 60;
+      document.getElementById('exam-clock').textContent =
+        (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function finish() {
+      if (timerId) clearInterval(timerId);
+      var correct = 0;
+      exam.questions.forEach(function (item, i) {
+        var sel = document.querySelector('input[name="q' + i + '"]:checked');
+        if (sel && parseInt(sel.value, 10) === item.a) correct += 1;
+      });
+      var total = exam.questions.length;
+      var pct = Math.round((correct / total) * 100);
+      var grade = pct >= 80 ? 'A' : pct >= 65 ? 'B' : 'Below B';
+      document.getElementById('exam-live').style.display = 'none';
+      document.getElementById('exam-result').style.display = 'block';
+      document.getElementById('result-title').textContent = grade === 'Below B' ? 'Keep practising' : 'Exam complete';
+      document.getElementById('result-score').textContent = correct + ' / ' + total + ' (' + pct + '%) · Grade ' + grade;
+      document.getElementById('result-msg').textContent = grade === 'A' || grade === 'B'
+        ? 'You qualify for an NE3XA achievement badge in this language. Visit the badges page for details.'
+        : 'Score 65% or higher for Grade B, or 80% for Grade A. Review the course and try again.';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.getElementById('exam-submit').addEventListener('click', function () {
+      if (confirm('Submit your answers now?')) finish();
+    });
+  })();
+  </script>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="NE3XA Home">
+        <img src="images/logo-light.png" alt="NE3XA" class="logo-img logo-img-light" width="180" height="52">
+        <img src="images/logo-dark.png" alt="NE3XA" class="logo-img logo-img-dark" width="180" height="52">
+      </a>
+          <p>Technology company focused on software, school systems and programming education.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="software-development.html">Software development</a>
+          <a href="web-development.html">Web development</a>
+          <a href="mobile-app-development.html">Mobile apps</a>
+          <a href="school-management.html">School management</a>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="programming-lessons.html">Programming courses</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Get in touch</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="values.html">Values</a>
+          <a href="process.html">Process</a>
+          <a href="careers.html">Careers</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 NE3XA. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
